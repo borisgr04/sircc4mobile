@@ -1,0 +1,8 @@
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\bin\Debug\GDocWord.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\bin\Debug\GDocWord.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\bin\Debug\GDocWord.xml
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\obj\Debug\GDocWord.Resources.resources
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\obj\Debug\GDocWord.vbproj.GenerateResource.Cache
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\obj\Debug\GDocWord.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\obj\Debug\GDocWord.xml
+E:\ByA\snvSircc4\svnSircc4_27082013_4\GDocWord\obj\Debug\GDocWord.pdb

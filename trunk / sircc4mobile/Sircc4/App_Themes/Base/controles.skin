@@ -1,0 +1,64 @@
+﻿<%-- SKIN PARA LAS GRID--%>
+<asp:ImageButton SkinId="IBtnEliminarG" runat="server"  Height="24px" Width="24px"
+                        ImageUrl="~/Images/Delete.png"  />
+<asp:ImageButton SkinId="IBtnEliminar" runat="server"  Height="32px" Width="32px"
+                        ImageUrl="~/images/Delete.png"  />
+<asp:ImageButton SkinId="IBtnNuevo2" runat="server" Height="32px" 
+                        ImageUrl="~/images/Nuevo2.png" Width="32px" ToolTip="Nuevo" />     
+<asp:ImageButton SkinId="IBtnBuscar2" runat="server" AccessKey="b" AlternateText="Buscar" Height="32px" Width="32px"
+                ImageUrl="~/images/Buscar2.png"  ToolTip="Buscar"/>
+<asp:ImageButton SkinId="IBtnGuardarG" runat="server" Height="32px" 
+                        ImageUrl="~/images/Save.png" Width="32px" ToolTip="Guardar" AlternateText="Guardar" />
+<asp:ImageButton SkinId="IBtnGuardar" runat="server" Height="42px" 
+                        ImageUrl="~/images/Confirmar.png" Width="42px" ToolTip="Confirmar" AlternateText="Confirmar" />
+<asp:ImageButton SkinId="IBtnInicio" runat="server" Height="32px" 
+                        ImageUrl="~/images/Menu/Home.png" Width="32px" ToolTip="Inicio" AlternateText="Inicio" />
+<asp:ImageButton SkinId="IBtnCamPwd" runat="server" Height="32px" 
+                        ImageUrl="~/images/CamPwd.png" Width="32px" ToolTip="Cambiar Contraseña" AlternateText="Cambiar Contraseña" />
+<asp:ImageButton SkinId="IBtnEnviar" runat="server" Height="32px" 
+                        ImageUrl="~/images/Enviar.png" Width="32px" ToolTip="Enviar" />
+<asp:ImageButton SkinId="IBtnCerrar" runat="server" Height="20px" 
+                        ImageUrl="~/images/Cerrar.png" Width="20px" />
+<asp:ImageButton SkinId="IBtnCancelar" runat="server" Height="32px" 
+                        ImageUrl="~/images/Cancelar.png" Visible="false" Width="32px" ToolTip="Cancelar" />
+<asp:ImageButton SkinId="IBtnEditar" runat="server" Height="32px" 
+                        ImageUrl="~/images/Editar.png" Width="32px" />                        
+<asp:ImageButton SkinId="IBtnAbrir" runat="server" Height="32px" 
+                        ImageUrl="~/images/Abrir.png" Width="32px" />                        
+<asp:ImageButton SkinId="IBtnNuevo" runat="server" Height="42px" 
+                        ImageUrl="~/images/Nuevo.png" Width="42px" ToolTip="Nuevo" />                        
+<asp:ImageButton SkinId="IBtnSelect2" runat="server" Height="32px" 
+                        ImageUrl="~/images/Cerrar.png" Width="32px" />         
+<asp:ImageButton SkinId="IBtnBuscar" runat="server" AccessKey="b" AlternateText="Buscar" Height="42px" Width="42px"
+                ImageUrl="~/images/Buscar.png"  ToolTip="Buscar"/>
+<asp:ImageButton SkinId="IBtnAdd" runat="server"  
+                        ImageUrl="~/images/AddImg.png"  />
+<asp:ImageButton SkinId="IBtnExcel" runat="server"  Height="32px" Width="32px"
+                        ImageUrl="~/Images/2012/document-excel-icon.png"  />
+  <%-- FIN SKIN PARA LAS GRID--%>                                              
+
+                                                   
+
+<%---'Imagens                                                 --%>
+<asp:Image SkinId="ImgSel" runat="server" ImageUrl="~/images/BlueTheme/Select.png" />                        
+<asp:Image SkinId="ImgOK" runat="server" ImageUrl="~/images/BlueTheme/Ok.gif" />                        
+<asp:Image SkinId="ImgLogo" runat="server" ImageUrl="~/Images/BlueTheme/logo.jpg" />                        
+<asp:Image SkinId="ImgError" runat="server" ImageUrl="~/Images/BlueTheme/Error.gif" />                        
+<asp:Image SkinId="ImgFoot" runat="server" ImageUrl="~/Images/BlueTheme/img_foot.png" />                        
+<asp:Image SkinId="ImgProgress" runat="server" ImageUrl="~/Images/BlueTheme/loading.gif" />      
+<asp:Image SkinId="ImgAAlerta" runat="server" ImageUrl="~/Images/2012/Alarm-Warning-icon.png" />   
+<asp:Image SkinId="ImgAError" runat="server" ImageUrl="~/Images/2012/Alarm-Error-icon.png" />   
+<asp:Image SkinId="ImgAOk" runat="server" ImageUrl="~/Images/2012/Alarm-Tick-icon.png" />   
+<asp:Image SkinId="ImgAInfo" runat="server" ImageUrl="~/Images/2012/Alarm-Info-icon.png" />   
+<%-------- --%>
+
+
+<asp:Label SkinId="MsgResult" runat="server" Heigth="100%" width="50%" ></asp:Label>      
+<asp:ValidationSummary runat="server" SkinID="ValidationSummary1" CssClass="adv" width="350px" />                  
+<asp:GridView   SkinId="grdSkin" runat="server" 
+                            CssClass="mGrid"  
+                            PagerStyle-CssClass="pgr"  
+                            AlternatingRowStyle-CssClass="alt" 
+                            RowStyle-CssClass="rows"
+                            AllowPaging="True" PageSize="10"  
+                            />

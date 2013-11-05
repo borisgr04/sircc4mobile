@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIF_Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SIF_ModelStoreContainer">
+    <EntitySet Name="DCOMPROMISO" EntityType="SIF_Model.Store.DCOMPROMISO" store:Type="Tables" Schema="PCT2013" />
+    <EntitySet Name="DEGRESO" EntityType="SIF_Model.Store.DEGRESO" store:Type="Tables" store:Schema="PCT2013" store:Name="DEGRESO">
+      <DefiningQuery>SELECT 
+      "DEGRESO"."NUM_EGRESO" AS "NUM_EGRESO", 
+      "DEGRESO"."CLS_EGRESO" AS "CLS_EGRESO", 
+      "DEGRESO"."FORMA_PAGO" AS "FORMA_PAGO", 
+      "DEGRESO"."NIT" AS "NIT", 
+      "DEGRESO"."BEN_CHEQUE" AS "BEN_CHEQUE", 
+      "DEGRESO"."NRO_CTABANCARIA" AS "NRO_CTABANCARIA", 
+      "DEGRESO"."COD_BANCO" AS "COD_BANCO", 
+      "DEGRESO"."NRO_CHEQUE" AS "NRO_CHEQUE", 
+      "DEGRESO"."VAL_TOTAL" AS "VAL_TOTAL", 
+      "DEGRESO"."VAL_NETO" AS "VAL_NETO", 
+      "DEGRESO"."FEC_PAGO" AS "FEC_PAGO", 
+      "DEGRESO"."MONTO_ESCRITO" AS "MONTO_ESCRITO", 
+      "DEGRESO"."COD_UNIDAD" AS "COD_UNIDAD", 
+      "DEGRESO"."SEC_OPERACION" AS "SEC_OPERACION", 
+      "DEGRESO"."ESTADO" AS "ESTADO", 
+      "DEGRESO"."USUARIO_ENTREGA" AS "USUARIO_ENTREGA", 
+      "DEGRESO"."FECHA_ENTREGA" AS "FECHA_ENTREGA", 
+      "DEGRESO"."CTA_BANCO" AS "CTA_BANCO", 
+      "DEGRESO"."COD_BANCO_NIT" AS "COD_BANCO_NIT", 
+      "DEGRESO"."TIPO_CTA_BANCO" AS "TIPO_CTA_BANCO"
+      FROM "PCT2013"."DEGRESO" "DEGRESO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DRESERVA" EntityType="SIF_Model.Store.DRESERVA" store:Type="Tables" Schema="PCT2013" />
+    <EntitySet Name="MCOMPROMISO" EntityType="SIF_Model.Store.MCOMPROMISO" store:Type="Tables" Schema="PCT2013" />
+    <EntitySet Name="MEGRESO" EntityType="SIF_Model.Store.MEGRESO" store:Type="Tables" store:Schema="PCT2013" store:Name="MEGRESO">
+      <DefiningQuery>SELECT 
+      "MEGRESO"."NUM_EGRESO" AS "NUM_EGRESO", 
+      "MEGRESO"."CLS_EGRESO" AS "CLS_EGRESO", 
+      "MEGRESO"."FEC_EGRESO" AS "FEC_EGRESO", 
+      "MEGRESO"."CON_EGRESO" AS "CON_EGRESO", 
+      "MEGRESO"."COD_ORDEN" AS "COD_ORDEN", 
+      "MEGRESO"."ORIGEN" AS "ORIGEN", 
+      "MEGRESO"."VAL_EGRESO" AS "VAL_EGRESO", 
+      "MEGRESO"."ESTADO" AS "ESTADO", 
+      "MEGRESO"."SEC_OPERACION" AS "SEC_OPERACION", 
+      "MEGRESO"."CLASIFICACION" AS "CLASIFICACION", 
+      "MEGRESO"."COD_UNIDAD" AS "COD_UNIDAD", 
+      "MEGRESO"."MB_MO" AS "MB_MO", 
+      "MEGRESO"."MONTO_ESCRITO" AS "MONTO_ESCRITO", 
+      "MEGRESO"."CHK_PARTIALPAY" AS "CHK_PARTIALPAY", 
+      "MEGRESO"."VALOR_CAMBIO" AS "VALOR_CAMBIO", 
+      "MEGRESO"."COD_MONEDA" AS "COD_MONEDA", 
+      "MEGRESO"."DEVOLUCION" AS "DEVOLUCION"
+      FROM "PCT2013"."MEGRESO" "MEGRESO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MORDEN" EntityType="SIF_Model.Store.MORDEN" store:Type="Tables" store:Schema="PCT2013" store:Name="MORDEN">
+      <DefiningQuery>SELECT 
+      "MORDEN"."VIGENCIA" AS "VIGENCIA", 
+      "MORDEN"."NUM_ORDEN" AS "NUM_ORDEN", 
+      "MORDEN"."OBJ_ORDEN" AS "OBJ_ORDEN", 
+      "MORDEN"."COD_ORDEN" AS "COD_ORDEN", 
+      "MORDEN"."VIG_COMPROMISO" AS "VIG_COMPROMISO", 
+      "MORDEN"."NUM_COMPROMISO" AS "NUM_COMPROMISO", 
+      "MORDEN"."NRO_FACTURA" AS "NRO_FACTURA", 
+      "MORDEN"."FEC_FACTURA" AS "FEC_FACTURA", 
+      "MORDEN"."FEC_VENC_FACT" AS "FEC_VENC_FACT", 
+      "MORDEN"."VAL_TOTAL" AS "VAL_TOTAL", 
+      "MORDEN"."VAL_NETO" AS "VAL_NETO", 
+      "MORDEN"."VAL_PAGADO" AS "VAL_PAGADO", 
+      "MORDEN"."ESTADO_ORDEN" AS "ESTADO_ORDEN", 
+      "MORDEN"."FEC_RADICACION" AS "FEC_RADICACION", 
+      "MORDEN"."FEC_PENDIENTE" AS "FEC_PENDIENTE", 
+      "MORDEN"."FEC_APROBACION" AS "FEC_APROBACION", 
+      "MORDEN"."FEC_CAUSACION" AS "FEC_CAUSACION", 
+      "MORDEN"."FEC_PROGPAGO" AS "FEC_PROGPAGO", 
+      "MORDEN"."NUM_EGRESO" AS "NUM_EGRESO", 
+      "MORDEN"."CLS_EGRESO" AS "CLS_EGRESO", 
+      "MORDEN"."FEC_EGRESO" AS "FEC_EGRESO", 
+      "MORDEN"."OP_CONTRIBUCION" AS "OP_CONTRIBUCION", 
+      "MORDEN"."NIT" AS "NIT", 
+      "MORDEN"."ANTICIPO" AS "ANTICIPO", 
+      "MORDEN"."AMORTIZA" AS "AMORTIZA", 
+      "MORDEN"."FIDUCIA" AS "FIDUCIA", 
+      "MORDEN"."MULTIPLES_PAGO" AS "MULTIPLES_PAGO", 
+      "MORDEN"."VAL_AMORTIZADO" AS "VAL_AMORTIZADO", 
+      "MORDEN"."COD_CENTRO" AS "COD_CENTRO", 
+      "MORDEN"."COD_REGION" AS "COD_REGION", 
+      "MORDEN"."COD_DEPTO" AS "COD_DEPTO", 
+      "MORDEN"."COD_MUNIC" AS "COD_MUNIC", 
+      "MORDEN"."VALOR_CAMBIO" AS "VALOR_CAMBIO"
+      FROM "PCT2013"."MORDEN" "MORDEN"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MORDEN_EGRESO" EntityType="SIF_Model.Store.MORDEN_EGRESO" store:Type="Tables" store:Schema="PCT2013" store:Name="MORDEN_EGRESO">
+      <DefiningQuery>SELECT 
+      "MORDEN_EGRESO"."VIGENCIA" AS "VIGENCIA", 
+      "MORDEN_EGRESO"."NUM_ORDEN" AS "NUM_ORDEN", 
+      "MORDEN_EGRESO"."NUM_EGRESO" AS "NUM_EGRESO", 
+      "MORDEN_EGRESO"."CLS_EGRESO" AS "CLS_EGRESO", 
+      "MORDEN_EGRESO"."FEC_EGRESO" AS "FEC_EGRESO", 
+      "MORDEN_EGRESO"."VAL_PAGADO" AS "VAL_PAGADO"
+      FROM "PCT2013"."MORDEN_EGRESO" "MORDEN_EGRESO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MRESERVA" EntityType="SIF_Model.Store.MRESERVA" store:Type="Tables" Schema="PCT2013" />
+    <EntitySet Name="PPTO_GASTOS_V1" EntityType="SIF_Model.Store.PPTO_GASTOS_V1" store:Type="Views" store:Schema="PCT2013" store:Name="PPTO_GASTOS_V1">
+      <DefiningQuery>SELECT 
+      "PPTO_GASTOS_V1"."VIGENCIA" AS "VIGENCIA", 
+      "PPTO_GASTOS_V1"."COD_UNIDAD" AS "COD_UNIDAD", 
+      "PPTO_GASTOS_V1"."COD_GASTO" AS "COD_GASTO", 
+      "PPTO_GASTOS_V1"."COD_RECURSO" AS "COD_RECURSO", 
+      "PPTO_GASTOS_V1"."NOM_GASTO" AS "NOM_GASTO", 
+      "PPTO_GASTOS_V1"."APROP_INICIAL" AS "APROP_INICIAL", 
+      "PPTO_GASTOS_V1"."APROP_ADICIONAL" AS "APROP_ADICIONAL", 
+      "PPTO_GASTOS_V1"."APROP_REDUCIDA" AS "APROP_REDUCIDA", 
+      "PPTO_GASTOS_V1"."APROP_DEFINITIVA" AS "APROP_DEFINITIVA", 
+      "PPTO_GASTOS_V1"."CONGELACIONES" AS "CONGELACIONES", 
+      "PPTO_GASTOS_V1"."CERTIFICACIONES" AS "CERTIFICACIONES", 
+      "PPTO_GASTOS_V1"."APROP_DISPONIBLE" AS "APROP_DISPONIBLE", 
+      "PPTO_GASTOS_V1"."COMPROMISOS" AS "COMPROMISOS", 
+      "PPTO_GASTOS_V1"."OBLIGACIONES" AS "OBLIGACIONES", 
+      "PPTO_GASTOS_V1"."PAGOS" AS "PAGOS", 
+      "PPTO_GASTOS_V1"."APROP_POR_COMPROMETER" AS "APROP_POR_COMPROMETER", 
+      "PPTO_GASTOS_V1"."SAL_CERTIFICADOS" AS "SAL_CERTIFICADOS", 
+      "PPTO_GASTOS_V1"."SAL_COMPROMISOS" AS "SAL_COMPROMISOS", 
+      "PPTO_GASTOS_V1"."CUENTAS_POR_PAGAR" AS "CUENTAS_POR_PAGAR", 
+      "PPTO_GASTOS_V1"."RES_CAJA" AS "RES_CAJA", 
+      "PPTO_GASTOS_V1"."RES_APROPIACION" AS "RES_APROPIACION", 
+      "PPTO_GASTOS_V1"."APROP_TRAMITE" AS "APROP_TRAMITE", 
+      "PPTO_GASTOS_V1"."REINTEGROS" AS "REINTEGROS", 
+      "PPTO_GASTOS_V1"."TIP_PAC" AS "TIP_PAC", 
+      "PPTO_GASTOS_V1"."COD_PAC" AS "COD_PAC", 
+      "PPTO_GASTOS_V1"."CON_SITUACION" AS "CON_SITUACION", 
+      "PPTO_GASTOS_V1"."DIS_INTERNA" AS "DIS_INTERNA", 
+      "PPTO_GASTOS_V1"."NIVEL_INTERNO" AS "NIVEL_INTERNO", 
+      "PPTO_GASTOS_V1"."RUBRO" AS "RUBRO", 
+      "PPTO_GASTOS_V1"."RUBRO_AUX" AS "RUBRO_AUX", 
+      "PPTO_GASTOS_V1"."GASTO" AS "GASTO", 
+      "PPTO_GASTOS_V1"."GASTO_AUX" AS "GASTO_AUX", 
+      "PPTO_GASTOS_V1"."CLASE" AS "CLASE", 
+      "PPTO_GASTOS_V1"."CUENTA" AS "CUENTA", 
+      "PPTO_GASTOS_V1"."SUBCUENTA" AS "SUBCUENTA", 
+      "PPTO_GASTOS_V1"."OBJETO" AS "OBJETO", 
+      "PPTO_GASTOS_V1"."ORDINAL" AS "ORDINAL", 
+      "PPTO_GASTOS_V1"."SUBORDINAL" AS "SUBORDINAL", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX1" AS "NIVEL_AUX1", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX2" AS "NIVEL_AUX2", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX3" AS "NIVEL_AUX3", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX4" AS "NIVEL_AUX4", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX5" AS "NIVEL_AUX5", 
+      "PPTO_GASTOS_V1"."NIVEL_AUX6" AS "NIVEL_AUX6", 
+      "PPTO_GASTOS_V1"."CTRL_RESERVA" AS "CTRL_RESERVA", 
+      "PPTO_GASTOS_V1"."NIVEL" AS "NIVEL"
+      FROM "PCT2013"."PPTO_GASTOS_V1" "PPTO_GASTOS_V1"</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_DCOMPROMISO_1" Association="SIF_Model.Store.FK_DCOMPROMISO_1">
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+      <End Role="DCOMPROMISO" EntitySet="DCOMPROMISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DRESERVA_1" Association="SIF_Model.Store.FK_DRESERVA_1">
+      <End Role="MRESERVA" EntitySet="MRESERVA" />
+      <End Role="DRESERVA" EntitySet="DRESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MCOMPROMISO_1" Association="SIF_Model.Store.FK_MCOMPROMISO_1">
+      <End Role="MRESERVA" EntitySet="MRESERVA" />
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MORDEN_2" Association="SIF_Model.Store.FK_MORDEN_2">
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+      <End Role="MORDEN" EntitySet="MORDEN" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DCOMPROMISO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_COMPROMISO" Type="number" Nullable="false" />
+    <Property Name="COD_UNIDAD" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_GASTO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_RECURSO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="VAL_COMPROMISO" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_OBLIGACION" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_TRAMITE" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGOS" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_ANTICIPO" Type="number" Precision="17" Scale="2" />
+    <Property Name="TIP_PAC" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COD_PAC" Type="number" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PCT2013.DEGRESO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DEGRESO">
+    <Key>
+      <PropertyRef Name="NUM_EGRESO" />
+      <PropertyRef Name="CLS_EGRESO" />
+      <PropertyRef Name="FORMA_PAGO" />
+      <PropertyRef Name="NIT" />
+      <PropertyRef Name="BEN_CHEQUE" />
+      <PropertyRef Name="NRO_CTABANCARIA" />
+      <PropertyRef Name="COD_BANCO" />
+      <PropertyRef Name="VAL_TOTAL" />
+      <PropertyRef Name="VAL_NETO" />
+      <PropertyRef Name="MONTO_ESCRITO" />
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="NUM_EGRESO" Type="number" Nullable="false" />
+    <Property Name="CLS_EGRESO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="FORMA_PAGO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NIT" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="BEN_CHEQUE" Type="varchar2" Nullable="false" MaxLength="80" />
+    <Property Name="NRO_CTABANCARIA" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="COD_BANCO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NRO_CHEQUE" Type="number" />
+    <Property Name="VAL_TOTAL" Type="number" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="VAL_NETO" Type="number" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="FEC_PAGO" Type="date" />
+    <Property Name="MONTO_ESCRITO" Type="varchar2" Nullable="false" MaxLength="255" />
+    <Property Name="COD_UNIDAD" Type="varchar2" MaxLength="50" />
+    <Property Name="SEC_OPERACION" Type="number" />
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="USUARIO_ENTREGA" Type="varchar2" MaxLength="30" />
+    <Property Name="FECHA_ENTREGA" Type="date" />
+    <Property Name="CTA_BANCO" Type="varchar2" MaxLength="25" />
+    <Property Name="COD_BANCO_NIT" Type="varchar2" MaxLength="4" />
+    <Property Name="TIPO_CTA_BANCO" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="DRESERVA">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_CERTIFICADO" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_CERTIFICADO" Type="number" Nullable="false" />
+    <Property Name="COD_UNIDAD" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_GASTO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_RECURSO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="VAL_CERTIFICADO" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_COMPROMISO" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_OBLIGACION" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGOS" Type="number" Precision="17" Scale="2" />
+    <Property Name="TRAMITE_CONTRATO" Type="number" Precision="17" Scale="2" />
+  </EntityType>
+  <EntityType Name="MCOMPROMISO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_COMPROMISO" Type="number" Nullable="false" />
+    <Property Name="FEC_COMPROMISO" Type="date" Nullable="false" />
+    <Property Name="OBJ_COMPROMISO" Type="varchar2" Nullable="false" MaxLength="2500" />
+    <Property Name="NUM_CERTIFICADO" Type="number" Nullable="false" />
+    <Property Name="TIPO_COMPROMISO" Type="number" Nullable="false" />
+    <Property Name="NRO_DOCUMENTO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="CLASE_DOCUMENTO" Type="number" Nullable="false" />
+    <Property Name="FEC_DOCUMENTO" Type="date" Nullable="false" />
+    <Property Name="FEC_VENCE_DOCUMENTO" Type="date" />
+    <Property Name="FORMALIDADES_PLENAS" Type="char" MaxLength="1" />
+    <Property Name="NIT" Type="varchar2" MaxLength="13" />
+    <Property Name="COD_CENTRO" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_REGION" Type="varchar2" MaxLength="50" />
+    <Property Name="ESTADO" Type="number" Nullable="false" />
+    <Property Name="FEC_ANULADO" Type="date" />
+    <Property Name="CONTRIBUCION" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="RP_CONTRIBUCION" Type="number" />
+    <Property Name="CASTIGO" Type="char" MaxLength="1" />
+    <Property Name="NUM_COMPROMISO_VA" Type="number" />
+    <Property Name="COD_DEPTO" Type="varchar2" MaxLength="10" />
+    <Property Name="COD_MUNIC" Type="varchar2" MaxLength="5" />
+    <Property Name="VALOR_CAMBIO" Type="number" Nullable="false" Precision="17" Scale="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PCT2013.MEGRESO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MEGRESO">
+    <Key>
+      <PropertyRef Name="NUM_EGRESO" />
+      <PropertyRef Name="CLS_EGRESO" />
+      <PropertyRef Name="FEC_EGRESO" />
+      <PropertyRef Name="CON_EGRESO" />
+      <PropertyRef Name="ORIGEN" />
+      <PropertyRef Name="VAL_EGRESO" />
+      <PropertyRef Name="ESTADO" />
+      <PropertyRef Name="CLASIFICACION" />
+      <PropertyRef Name="MB_MO" />
+      <PropertyRef Name="CHK_PARTIALPAY" />
+      <PropertyRef Name="VALOR_CAMBIO" />
+      <PropertyRef Name="DEVOLUCION" />
+    </Key>
+    <Property Name="NUM_EGRESO" Type="number" Nullable="false" />
+    <Property Name="CLS_EGRESO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="FEC_EGRESO" Type="date" Nullable="false" />
+    <Property Name="CON_EGRESO" Type="varchar2" Nullable="false" MaxLength="2500" />
+    <Property Name="COD_ORDEN" Type="number" />
+    <Property Name="ORIGEN" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="VAL_EGRESO" Type="number" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="SEC_OPERACION" Type="number" />
+    <Property Name="CLASIFICACION" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="COD_UNIDAD" Type="varchar2" MaxLength="50" />
+    <Property Name="MB_MO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="MONTO_ESCRITO" Type="varchar2" MaxLength="255" />
+    <Property Name="CHK_PARTIALPAY" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="VALOR_CAMBIO" Type="number" Nullable="false" Precision="17" Scale="5" />
+    <Property Name="COD_MONEDA" Type="char" MaxLength="4" />
+    <Property Name="DEVOLUCION" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PCT2013.MORDEN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MORDEN">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_ORDEN" />
+      <PropertyRef Name="OBJ_ORDEN" />
+      <PropertyRef Name="COD_ORDEN" />
+      <PropertyRef Name="VIG_COMPROMISO" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+      <PropertyRef Name="ESTADO_ORDEN" />
+      <PropertyRef Name="FEC_RADICACION" />
+      <PropertyRef Name="NIT" />
+      <PropertyRef Name="ANTICIPO" />
+      <PropertyRef Name="AMORTIZA" />
+      <PropertyRef Name="FIDUCIA" />
+      <PropertyRef Name="MULTIPLES_PAGO" />
+      <PropertyRef Name="VAL_AMORTIZADO" />
+      <PropertyRef Name="VALOR_CAMBIO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_ORDEN" Type="number" Nullable="false" />
+    <Property Name="OBJ_ORDEN" Type="varchar2" Nullable="false" MaxLength="2500" />
+    <Property Name="COD_ORDEN" Type="number" Nullable="false" />
+    <Property Name="VIG_COMPROMISO" Type="number" Nullable="false" />
+    <Property Name="NUM_COMPROMISO" Type="number" Nullable="false" />
+    <Property Name="NRO_FACTURA" Type="char" MaxLength="15" />
+    <Property Name="FEC_FACTURA" Type="date" />
+    <Property Name="FEC_VENC_FACT" Type="date" />
+    <Property Name="VAL_TOTAL" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_NETO" Type="number" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGADO" Type="number" Precision="17" Scale="2" />
+    <Property Name="ESTADO_ORDEN" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="FEC_RADICACION" Type="date" Nullable="false" />
+    <Property Name="FEC_PENDIENTE" Type="date" />
+    <Property Name="FEC_APROBACION" Type="date" />
+    <Property Name="FEC_CAUSACION" Type="date" />
+    <Property Name="FEC_PROGPAGO" Type="date" />
+    <Property Name="NUM_EGRESO" Type="number" />
+    <Property Name="CLS_EGRESO" Type="char" MaxLength="1" />
+    <Property Name="FEC_EGRESO" Type="date" />
+    <Property Name="OP_CONTRIBUCION" Type="number" />
+    <Property Name="NIT" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="ANTICIPO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="AMORTIZA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="FIDUCIA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="MULTIPLES_PAGO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="VAL_AMORTIZADO" Type="number" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="COD_CENTRO" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_REGION" Type="varchar2" MaxLength="50" />
+    <Property Name="COD_DEPTO" Type="varchar2" MaxLength="10" />
+    <Property Name="COD_MUNIC" Type="varchar2" MaxLength="5" />
+    <Property Name="VALOR_CAMBIO" Type="number" Nullable="false" Precision="17" Scale="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PCT2013.MORDEN_EGRESO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MORDEN_EGRESO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_ORDEN" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_ORDEN" Type="number" Nullable="false" />
+    <Property Name="NUM_EGRESO" Type="number" />
+    <Property Name="CLS_EGRESO" Type="char" MaxLength="1" />
+    <Property Name="FEC_EGRESO" Type="date" />
+    <Property Name="VAL_PAGADO" Type="number" Precision="17" Scale="2" />
+  </EntityType>
+  <EntityType Name="MRESERVA">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_CERTIFICADO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="NUM_CERTIFICADO" Type="number" Nullable="false" />
+    <Property Name="FEC_EXPEDICION" Type="date" Nullable="false" />
+    <Property Name="FEC_VENCIMIENTO" Type="date" Nullable="false" />
+    <Property Name="NRO_PRORROGA" Type="number" Nullable="false" />
+    <Property Name="OBJ_CERTIFICADO" Type="varchar2" Nullable="false" MaxLength="2500" />
+    <Property Name="DEP_SOLICITANTE" Type="varchar2" MaxLength="60" />
+    <Property Name="ESTADO" Type="number" Nullable="false" />
+    <Property Name="FEC_ANULADO" Type="date" />
+    <Property Name="VIG_FUTURA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TRAMITE_CONTRATO" Type="number" Precision="17" Scale="2" />
+    <Property Name="CONTRIBUCION" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CDP_CONTRIBUCION" Type="number" />
+    <Property Name="NUM_CERTIFICADO_VA" Type="number" />
+    <Property Name="INT_PREVIO" Type="char" MaxLength="1" />
+    <Property Name="CDP_MACRO_PREVIO" Type="char" MaxLength="1" />
+    <Property Name="VALOR_CAMBIO" Type="number" Nullable="false" Precision="17" Scale="5" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'PCT2013.PPTO_GASTOS_V1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PPTO_GASTOS_V1">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+      <PropertyRef Name="NOM_GASTO" />
+      <PropertyRef Name="APROP_INICIAL" />
+      <PropertyRef Name="TIP_PAC" />
+      <PropertyRef Name="COD_PAC" />
+      <PropertyRef Name="CON_SITUACION" />
+      <PropertyRef Name="DIS_INTERNA" />
+      <PropertyRef Name="NIVEL" />
+    </Key>
+    <Property Name="VIGENCIA" Type="number" Nullable="false" />
+    <Property Name="COD_UNIDAD" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_GASTO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="COD_RECURSO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NOM_GASTO" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="APROP_INICIAL" Type="number" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="APROP_ADICIONAL" Type="number" Precision="17" Scale="2" />
+    <Property Name="APROP_REDUCIDA" Type="number" Precision="17" Scale="2" />
+    <Property Name="APROP_DEFINITIVA" Type="number" />
+    <Property Name="CONGELACIONES" Type="number" Precision="17" Scale="2" />
+    <Property Name="CERTIFICACIONES" Type="number" Precision="17" Scale="2" />
+    <Property Name="APROP_DISPONIBLE" Type="number" />
+    <Property Name="COMPROMISOS" Type="number" Precision="17" Scale="2" />
+    <Property Name="OBLIGACIONES" Type="number" Precision="17" Scale="2" />
+    <Property Name="PAGOS" Type="number" Precision="17" Scale="2" />
+    <Property Name="APROP_POR_COMPROMETER" Type="number" />
+    <Property Name="SAL_CERTIFICADOS" Type="number" />
+    <Property Name="SAL_COMPROMISOS" Type="number" />
+    <Property Name="CUENTAS_POR_PAGAR" Type="number" />
+    <Property Name="RES_CAJA" Type="number" Precision="17" Scale="2" />
+    <Property Name="RES_APROPIACION" Type="number" Precision="17" Scale="2" />
+    <Property Name="APROP_TRAMITE" Type="number" Precision="17" Scale="2" />
+    <Property Name="REINTEGROS" Type="number" Precision="17" Scale="2" />
+    <Property Name="TIP_PAC" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COD_PAC" Type="number" Nullable="false" />
+    <Property Name="CON_SITUACION" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="DIS_INTERNA" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NIVEL_INTERNO" Type="number" />
+    <Property Name="RUBRO" Type="varchar2" MaxLength="100" />
+    <Property Name="RUBRO_AUX" Type="varchar2" MaxLength="100" />
+    <Property Name="GASTO" Type="varchar2" MaxLength="100" />
+    <Property Name="GASTO_AUX" Type="varchar2" MaxLength="100" />
+    <Property Name="CLASE" Type="varchar2" MaxLength="4" />
+    <Property Name="CUENTA" Type="varchar2" MaxLength="8" />
+    <Property Name="SUBCUENTA" Type="varchar2" MaxLength="12" />
+    <Property Name="OBJETO" Type="varchar2" MaxLength="16" />
+    <Property Name="ORDINAL" Type="varchar2" MaxLength="20" />
+    <Property Name="SUBORDINAL" Type="varchar2" MaxLength="24" />
+    <Property Name="NIVEL_AUX1" Type="varchar2" MaxLength="28" />
+    <Property Name="NIVEL_AUX2" Type="varchar2" MaxLength="32" />
+    <Property Name="NIVEL_AUX3" Type="varchar2" MaxLength="36" />
+    <Property Name="NIVEL_AUX4" Type="varchar2" MaxLength="40" />
+    <Property Name="NIVEL_AUX5" Type="varchar2" MaxLength="44" />
+    <Property Name="NIVEL_AUX6" Type="varchar2" MaxLength="48" />
+    <Property Name="CTRL_RESERVA" Type="char" MaxLength="1" />
+    <Property Name="NIVEL" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_DCOMPROMISO_1">
+    <End Role="MCOMPROMISO" Type="SIF_Model.Store.MCOMPROMISO" Multiplicity="1" />
+    <End Role="DCOMPROMISO" Type="SIF_Model.Store.DCOMPROMISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Principal>
+      <Dependent Role="DCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DRESERVA_1">
+    <End Role="MRESERVA" Type="SIF_Model.Store.MRESERVA" Multiplicity="1" />
+    <End Role="DRESERVA" Type="SIF_Model.Store.DRESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Principal>
+      <Dependent Role="DRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MCOMPROMISO_1">
+    <End Role="MRESERVA" Type="SIF_Model.Store.MRESERVA" Multiplicity="1" />
+    <End Role="MCOMPROMISO" Type="SIF_Model.Store.MCOMPROMISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Principal>
+      <Dependent Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MORDEN_2">
+    <End Role="MCOMPROMISO" Type="SIF_Model.Store.MCOMPROMISO" Multiplicity="1" />
+    <End Role="MORDEN" Type="SIF_Model.Store.MORDEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Principal>
+      <Dependent Role="MORDEN">
+        <PropertyRef Name="VIG_COMPROMISO" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

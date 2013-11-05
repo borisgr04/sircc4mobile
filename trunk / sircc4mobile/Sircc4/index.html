@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Form</title>
+
+    <link href="Styles/styleLogin.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#cerceve").hide().fadeIn(500);
+	$(".show").hide();
+	$(".close").click(function(){
+		$("#cerceve").hide(500);
+		$(".show").fadeIn(500);
+	});
+	$(".show").click(function(){
+		$("#cerceve").fadeIn(500);
+		$(".show").hide(500);
+	});
+});
+</script>
+</head>
+<body>
+<div class="show"></div>
+<div id="cerceve">
+<div class="header"><div class="text" style="float:left">Login Form</div><div class="close" style="float:right;margin-right:20px;cursor:pointer;">x</div></div>
+<div class="formbody">
+<form action="" method="post">
+<input type="text" name="username" placeholder="Username" class="text" style="background: url(Styles/imagesLogin/username.png) no-repeat;" />
+                <input type="password" name="password" placeholder="••••••••••••" class="text" style="background: url(Styles/imagesLogin/password.png) no-repeat;" />
+                <input type="submit" value="Sign In" class="submit" style="background: url(Styles/imagesLogin/login.png) no-repeat;" /><a
+                    href="#">Lost your password?</a>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/admEspTec.js" type="text/javascript"></script>
+    <style type="text/css">
+        .editedRow
+        {
+            color: #b90f0f;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div id="msgEPEditar" class="information">
+            Puede editar haciendo click sobre la celda.</div>
+        <div>
+            <div id="jqxgridEspTec">
+            </div>
+            <div id="divBtnGridEP">
+            </div>
+        </div>
+        <!-- -->
+        <div id="wEspTec">
+            <div id="wHEspTec">
+                <span>Agregar Item </span>
+            </div>
+            <div style="overflow: hidden;" id="wCEspTec">
+                <div id="msgEP" class="information">
+                    Hacer click para seleccionar el proyecto</div>
+                <div>
+                    <!--<form id="testForm" action="./">-->
+                    <div class="form">
+                        <div class="filaform">
+                            <label for="txtGrupo">
+                                Grupo</label>
+                            <div style="font-size: 12px; font-family: Verdana;" id="txtGrupo">
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtDesc">
+                                Descripción</label>
+                            <textarea id="txtDesc" class="textareapq" name="txtDesc"></textarea>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtCan">
+                                Cantidad</label>
+                            <div style='margin-top: 3px;' id='txtCan'>
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtUni">
+                                Unidad</label>
+                            <input type="text" id="txtUni" />
+                        </div>
+                        <div class="filaform">
+                            <label for="txtValUni">
+                                Valor Unitario</label>
+                            <div style='margin-top: 3px;' id='txtValUni'>
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtIVA">
+                                % IVA</label>
+                            <div style='margin-top: 3px;' id='txtIVA'>
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtValPar">
+                                Valor Parcial</label>
+                            <div style='margin-top: 3px;' id='txtValPar'>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="filaformBtn">
+                            <input type="button" value="Guardar" id="BtnEPGuardar" />
+                            <input type="button" value="Cancelar" id="BtnEPCancelar" />
+                        </div>
+                        <div class="filaformBtn" id="divBotones">
+                        </div>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

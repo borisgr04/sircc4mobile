@@ -1,0 +1,9 @@
+E:\ByA\Sircc4\Sircc4\Entidades\bin\Debug\Entidades.dll
+E:\ByA\Sircc4\Sircc4\Entidades\bin\Debug\Entidades.pdb
+E:\ByA\Sircc4\Sircc4\Entidades\obj\Debug\Entidades.dll
+E:\ByA\Sircc4\Sircc4\Entidades\obj\Debug\Entidades.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Entidades\bin\Debug\Entidades.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Entidades\bin\Debug\Entidades.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Entidades\obj\Debug\Entidades.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Entidades\obj\Debug\Entidades.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache

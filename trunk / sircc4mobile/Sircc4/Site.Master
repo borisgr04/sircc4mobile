@@ -1,0 +1,304 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Sircc4.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/jqwidgets/styles/jqx.base.css")%>"
+        type="text/css" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqscripts/jquery-1.10.1.min.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxcore.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxnavigationbar.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxWindow.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxdata.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxGrid.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxscrollbar.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxbuttons.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxlistbox.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxmenu.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxgrid.pager.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxgrid.filter.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxgrid.sort.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxgrid.selection.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxdropdownlist.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxSplitter.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxExpander.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqwidgets/jqxTree.js")%>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqscripts/gettheme.js")%>"></script>
+    <link href="../jqwidgets/styles/jqx.metro.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/jqscripts/bya_page.js")%>"></script>
+    <script type="text/javascript">
+        var theme;
+        $(document).ready(function () {
+            //$.data(document.body, 'theme', 'bootstrap');
+            $.data(document.body, 'theme', 'metro');
+            theme = getDemoTheme();
+            var url = "jqwidgets/styles/jqx." + theme + '.css';
+            $(document).find('head').append('<link rel="stylesheet" href="' + url + '" media="screen" />');
+            // Create jqxNavigationBar.
+            
+            $("#jqxNavigationBar").jqxNavigationBar({ width: 200, expandMode: 'multiple', expandedIndexes: [2, 3], theme: theme });
+            
+
+            $("#jqExpMenu").jqxExpander({ toggleMode: 'click', showArrow: true, width: "100%", height: "400px", theme: theme,
+                initContent: function () {
+                    $('#jqTreeMenu').jqxTree({ height: '100%', width: '100%', theme: theme });
+                }
+            });
+            /*
+            $("#jqxNavigationBar").jqxNavigationBar({ initContent: function (index) {
+            $('#jqTreeMenu').jqxTree({ height: '100%', width: '100%', theme: theme });
+            }
+            });
+            */
+        });
+    </script>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    SIRCC - Sistema de Radicación y Control de Contratos
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div id="recuadrocont">
+            <div id="contenmenu">
+                <asp:Literal ID="LMenu" runat="server"></asp:Literal>
+                <div id="jqxNavigationBar">
+                    <div>
+                        <div style='margin-top: 2px;'>
+                            <div style='float: left;'>
+                                <img alt='Mail' src='jqwidgets/images/mailIcon.png' /></div>
+                            <div style='margin-left: 4px; float: left;'>
+                                Elaboración</div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href='EstPrev/wfRgEstPrev.aspx?tip=EN' target="_blank">Nuevo</a></li>
+                            <li><a href='EstPrev/wfRgEstPrev.aspx?tip=EP' target="_blank">Nuevo</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=EL")'>Completar</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=RV")'>Revisar</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=AP")'>Aprobar</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=CN")'>Consultar</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx")'>Imprimir</a></li>
+                            <li><a href='javascript:pantallacompleta("EPConsultas/conEP.aspx")'>Historial</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="jqExpMenu">
+                    <div>
+                        Estudios Previos</div>
+                    <div class="jqx-hidescrollbars">
+                        <div class="jqx-hideborder" id='jqTreeMenu'>
+                            <ul>
+                                <li item-expanded='true' id="Li1">
+                                    <img style='float: left; margin-right: 5px;' src='jqwidgets/images/contactsIcon.png' /><span
+                                        item-title="true">Estudios Previos</span>
+                                    <ul>
+                                        <li>
+                                            <img style='float: left; margin-right: 5px;' /><span item-title="true">Crear</span>
+                                            <ul>
+                                                <li><a href='EstPrev/wfRgEstPrev.aspx?tip=EN' target="_blank">
+                                                    <img style='float: left; margin-right: 5px; src=""' /><span item-title="true">Nuevo</span>
+                                                </a></li>
+                                                <li><a href='javascript:VerPlantillas()'>
+                                                    <img style='float: left; margin-right: 5px; src=""' /><span item-title="true">Plantillas</span>
+                                                </a></li>
+                                                <li>
+                                                    <img style='float: left; margin-right: 5px;' /><span item-title="true">Apartir de Existente</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=EL")'>
+                                            <img style='float: left; margin-right: 5px; src=""' />
+                                            <span item-title="true">Abrir</span> 
+                                            </a>
+                                            </li>
+                                        <li>
+                                        <a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=RV")'>
+                                            <img style='float: left; margin-right: 5px; src=""' />
+                                        <span item-title="true">Revisar</span>
+                                        </a> </li>
+                                        <li>
+                                        <a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=AP")'>
+                                            <img style='float: left; margin-right: 5px; src=""' />
+                                        <span item-title="true">Aprobar</span>
+                                        </a>
+                                         </li>
+                                        <li>
+                                        <a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=CN")'>
+                                            <img style='float: left; margin-right: 5px; src=""' />
+                                        <span item-title="true">Consultar</span> 
+                                        </a>
+                                        </li>
+                                        <li>
+                                        <a href='javascript:pantallacompleta("EPConsultas/conEP.aspx?tip=IM")'>
+                                            <img style='float: left; margin-right: 5px; src=""' />
+                                        <span item-title="true">Imprimir</span>
+                                        </a>
+                                         </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contencenter">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <div id="mainSplitter">
+                <div>
+                    <div style="border: none;" id="feedExpander">
+                        <div class="jqx-hideborder">
+                            Feeds</div>
+                        <div class="jqx-hideborder jqx-hidescrollbars">
+                            <div class="jqx-hideborder" id='jqxTree'>
+                                <ul>
+                                    <li item-expanded='true' id="t1">
+                                        <img style='float: left; margin-right: 5px;' src='../../images/contactsIcon.png' /><span
+                                            item-title="true">News and Blogs</span>
+                                        <ul>
+                                            <li>
+                                                <img style='float: left; margin-right: 5px;' src='../../images/favorites.png' /><span
+                                                    item-title="true">Favorites</span>
+                                                <ul>
+                                                    <li>
+                                                        <img style='float: left; margin-right: 5px;' src='../../images/folder.png' /><span
+                                                            item-title="true">ScienceDaily</span> </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <img style='float: left; margin-right: 5px;' src='../../images/folder.png' /><span
+                                                    item-title="true">Geek.com</span> </li>
+                                            <li>
+                                                <img style='float: left; margin-right: 5px;' src='../../images/folder.png' /><span
+                                                    item-title="true">CNN.com</span> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="contentSplitter">
+                        <div class="feed-item-list-container" id="feedUpperPanel">
+                            <div class="jqx-hideborder" id="feedListExpander">
+                                <div class="jqx-hideborder" id="feedHeader">
+                                </div>
+                                <div class="jqx-hideborder jqx-hidescrollbars">
+                                    <div class="jqx-hideborder" id="feedListContainer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="feedContentArea">
+                            <div class="jqx-hideborder" id="feedContentExpander">
+                                <div class="jqx-hideborder" id="feedItemHeader">
+                                </div>
+                                <div class="jqx-hideborder jqx-hidescrollbars">
+                                    <div class="jqx-hideborder" id="feedItemContent">
+                                        Select a news item to see it's content
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script src="Ventanas/ModalNuevoEP.js" type="text/javascript"></script>
+    <!--VENTANA CONSULTA DE PROYECTOS  -->
+    <div id="winNuevoEP">
+        <div id="wHNuevoEP">
+            <span>Crear Nuevo Estudio Previo </span>
+        </div>
+        <div style="overflow: hidden;" id="wCProy">
+            <div id="msgConNuevoEP" class="information">
+                Hacer click para seleccionar el proyecto</div>
+            <div>
+                <div id='jqxBotones'>
+                </div>
+                <div id="jqxgridNuevoEP">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$("#jqxWidget").jqxButtonGroup({ theme: theme,  mode: 'default' });
+
+            var ancho = 80, alto = 50;
+            $("#Left").jqxButton({ theme: theme, width: ancho, height: alto });
+            $("#Center").jqxButton({ theme: theme, width: ancho, height: alto });
+            $("#Right").jqxButton({ theme: theme, width: ancho, height: alto });
+
+            $('#mainSplitter').jqxSplitter({ theme: theme, width: 600, height: 300, panels: [{ size: 200, min: 100 }, { min: 200, size: 400}] });
+            $('#contentSplitter').jqxSplitter({ width: '100%', height: '100%', theme: theme, orientation: 'horizontal', panels: [{ size: 400, min: 100, collapsible: false}] });
+            $("#feedExpander").jqxExpander({ toggleMode: 'none', showArrow: true, width: "100%", height: "100%", theme: theme,
+                initContent: function () {
+                    $('#jqxTree').jqxTree({ height: '100%', width: '100%', theme: theme });
+                }
+            });
+
+
+        });
+        function VerPlantillas() {
+            ModalNuevoEP.showWindow(function (ter) {
+                alert("Boris...");
+            });
+        }
+
+        function pantallacompleta(pagina) {
+            var opciones = ("toolbar=no,location=no, directories=no, status=no, menubar=no ,scrollbars=no, resizable=no, fullscreen=yes");
+            window.open(pagina, "", opciones, false);
+        }
+
+
+
+
+           
+    </script>
+</body>
+</html>

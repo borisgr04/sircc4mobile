@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="js/admCDP_I.js" type="text/javascript"></script>
+    <title></title>
+    <!-- Cargar Paginas -->
+    <style type="text/css">
+        .editedRow
+        {
+            color: #b90f0f;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <div id="msgCDPEditar" class="information">
+        Diligencia los datos.</div>
+    <div id="jqxgridCDP">
+    </div>
+    <div id="divBtnGridCDP">
+    </div>
+
+    <div id="divRubros">Seleccione un CDP para editar los rubros asociados.... </div>
+    <!-- -->
+    <div id="wadmCDP">
+        <div id="wHCDP">
+            <span>Registro </span>
+        </div>
+        <div style="overflow: hidden;" id="wCCDP">
+            <div id="msgCDP" class="information">
+                Diligencia los datos
+            </div>
+            <div>
+                <!--<form id="testForm" action="./">-->
+                <div class="form">
+                    <div class="filaform">
+                        <label for="txtGrupoCDP">
+                            Grupo</label>
+                        <div style="font-size: 12px; font-family: Verdana;" id="txtGrupoCDP">
+                        </div>
+                    </div>
+                    <div class="filaform">
+                        <label for="txtNroCDP">
+                            Nro CDP</label>
+                        <div style="font-size: 12px; font-family: Verdana;" id="txtNroCDP">
+                        </div>
+                    </div>
+                    <div class="filaform">
+                        <label for="txtFecCDP">
+                            Fecha CDP</label>
+                        <div id="txtFecCDP" style="margin-top: 3px;" />
+                    </div>
+                    <div class="filaform">
+                        <label for="txtValCDP">
+                            Valor Total CDP</label>
+                        <div style="font-size: 12px; font-family: Verdana;" id="txtValCDP">
+                        </div>
+                    </div>
+                    <div class="filaform">
+                        <label for="cboVigFut">
+                            Vigencia Futura</label>
+                        <div style="font-size: 12px; font-family: Verdana;" id="cboVigFut">
+                        </div>
+                    </div>
+                    <div class="filaformBtn">
+                    </div>
+                    <br />
+                    <div class="filaformBtn">
+                        <input type="button" value="Guardar" id="BtnEPGuardarCDP" />
+                        <input type="button" value="Cancelar" id="BtnEPCancelarCDP" />
+                    </div>
+                    <div class="filaformBtn" id="divBotonesCDP">
+                    </div>
+                </div>
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

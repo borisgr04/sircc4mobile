@@ -1,0 +1,68 @@
+﻿<!DOCTYPE >
+<html>
+<head>
+    <title>SIRCC</title>
+    <script type="text/javascript" src="/jqwidgets/jqxDateTimeInput.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxcalendar.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxNumberInput.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxInput.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxTabs.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxValidator.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxcheckbox.js "></script>
+    <script src="/Solicitudes/js/GesSolicitudes.js" type="text/javascript"></script>
+    <link href="/bootstrap/css/bootstrapByA.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="winNuevoEP">
+        <div id="wHNuevoEP">
+            <span>Crear Nuevo Estudio Previo a Partir de Plantilla </span>
+        </div>
+        <div style="overflow: hidden;">
+            <div id="msgConNuevoEP" class="information">
+                <ol>
+                    <li>Presione el boton Crear.</li>
+                    <li>
+                    Despues de Creado, presione el Botón abrir para editarlo</li>
+                </ol>
+            </div>
+            <div>
+                <br />
+                <br />
+                <div>
+                    <input type="button" value="Crear" id='btnCrearNuevo' />
+                    <input type="button" value="Abrir" id='btnAbrir' />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-left: 10px; padding-right: 10px;padding-top:20px">
+        <div class="information">
+            Listado de Solicitudes Registrada por Dependencia.
+        </div>
+       <div class="row-fluid">
+            <div class="span4">
+            <label>
+                            Dependencia Delegada:</label>
+            </div>
+            <div class="span4">
+                    <div style="font-size: 12px; font-family: Verdana;" id="CboDepDel" class="cbo">
+                    </div>
+            </div>
+                    <div class="span4">
+                        <input type="button" value="Consultar" id="BtnConsulta" />
+                        <input type="button" value="Nuevo" id="BtnNuevo" />
+                        <input type="button" value="Editar" id="BtnEditar" />
+                    </div>
+       </div>
+         <div class="row-fluid">
+            <div class="span12">
+            <br />
+            </div>
+       </div>
+
+        <div id="jqxgridSol">
+        </div>
+    </div>
+    
+</body>
+</html>

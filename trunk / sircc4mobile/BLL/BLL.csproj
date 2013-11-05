@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82CF2ECC-873B-4B6C-A676-06059419203B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft ADO.NET Entity Framework 4.1\Binaries\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2010.2.10.713, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2010.2.10.713, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikCommon, Version=2010.2.10.713, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="absBLL.cs" />
+    <Compile Include="conEstPrev.cs" />
+    <Compile Include="DynamicLibrary.cs" />
+    <Compile Include="EnviaDatos.cs" />
+    <Compile Include="EstPrev\mEP_CDP_I.cs" />
+    <Compile Include="EstPrev\mEP_HESTADOEP.cs" />
+    <Compile Include="EstPrev\mESTPREVplantilla.cs" />
+    <Compile Include="EstPrev\mRevESTPREV.cs" />
+    <Compile Include="EstPrev\mEP_RUBROS_CDP.cs" />
+    <Compile Include="EstPrev\mEP_CDP.cs" />
+    <Compile Include="EstPrev\mEP_CONMUN.cs" />
+    <Compile Include="EstPrev\mEP_OBLIGACIONESE.cs" />
+    <Compile Include="EstPrev\mEP_CAP_JUR.cs" />
+    <Compile Include="EstPrev\mEP_OBLIGACIONESC.cs" />
+    <Compile Include="EstPrev\mEP_POLIZAS.cs" />
+    <Compile Include="EstPrev\mEP_ESPTEC.cs" />
+    <Compile Include="EstPrev\mEP_Proyectos.cs" />
+    <Compile Include="EstPrev\mESTPREV.cs" />
+    <Compile Include="EstudiosPreviosBL.cs" />
+    <Compile Include="Filtros\FiltroContratosFactory.cs" />
+    <Compile Include="Filtros\FiltrosContratos.cs" />
+    <Compile Include="Filtros\FiltrosContratosI.cs" />
+    <Compile Include="Filtros\FiltrosContratosN.cs" />
+    <Compile Include="GCConsContratosBL.cs" />
+    <Compile Include="GCRegActasBL.cs" />
+    <Compile Include="GenEstudioPrevio.cs" />
+    <Compile Include="gesEstPrevBLL.cs" />
+    <Compile Include="MasterBL.cs" />
+    <Compile Include="Menu\gesMenuAdapter.cs" />
+    <Compile Include="EstPrev\mEP_FORMA_PAGO.cs" />
+    <Compile Include="mobile\mobContratos.cs" />
+    <Compile Include="mobile\mobConsultas.cs" />
+    <Compile Include="mobile\mobGeneral.cs" />
+    <Compile Include="mobile\mobSolicitudes.cs" />
+    <Compile Include="mobile\vDEPENDENCIAS.cs" />
+    <Compile Include="mobile\vPCONTRATOS.cs" />
+    <Compile Include="mobile\vPCRONOGRAMAS.cs" />
+    <Compile Include="mobile\vPESTADOS.cs" />
+    <Compile Include="mobile\vPSolicitudes.cs" />
+    <Compile Include="mobile\vSUBTIPOS.cs" />
+    <Compile Include="mobile\vTerceros.cs" />
+    <Compile Include="mobile\vTIPOSCONT.cs" />
+    <Compile Include="mobile\vTIPOSPROC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rESTPREV\rEstPrev.cs" />
+    <Compile Include="Solicitudes\Gestion\mPSOLICITUDES.cs" />
+    <Compile Include="Solicitudes\PSolicitudesBLL.cs" />
+    <Compile Include="Solicitudes\Vistas\vPSolicitudes.cs" />
+    <Compile Include="Vistas\vEP_CDP.cs" />
+    <Compile Include="Vistas\vEP_CONMUN.cs" />
+    <Compile Include="Vistas\vEP_HESTADOSEP.cs" />
+    <Compile Include="Vistas\vEP_OBLIGACIONESE.cs" />
+    <Compile Include="Vistas\vDEPENDENCIA.cs" />
+    <Compile Include="Vistas\vEP_CARGO.cs" />
+    <Compile Include="Vistas\vEP_ESPTEC.cs" />
+    <Compile Include="Vistas\vEP_ESTADOS.cs" />
+    <Compile Include="Vistas\vEP_OBLIGACIONESC.cs" />
+    <Compile Include="Vistas\vEP_POLIZAS.cs" />
+    <Compile Include="Vistas\vEP_PROYECTOS.cs" />
+    <Compile Include="Vistas\vEP_RUBROS_CDP.cs" />
+    <Compile Include="Vistas\vESTPREV.cs" />
+    <Compile Include="Vistas\vESTPREVCON.cs" />
+    <Compile Include="Vistas\vEP_FORMA_PAGO.cs" />
+    <Compile Include="Vistas\Vistas.cs" />
+    <Compile Include="Vistas\vMUNICIPIOS.cs" />
+    <Compile Include="Vistas\vSUBTIPOS.cs" />
+    <Compile Include="Vistas\vTerceros.cs" />
+    <Compile Include="Vistas\vTIPOSCONT.cs" />
+    <Compile Include="Vistas\vTIPOSPROC.cs" />
+    <Compile Include="Vistas\vTIPO_PAGO.cs" />
+    <Compile Include="Vistas\vTIPO_PLAZOS.cs" />
+    <Compile Include="Vistas\vVIGENCIAS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ByA\ByA.csproj">
+      <Project>{29846646-2CE1-4EE3-B9EA-7BF9B50B1FED}</Project>
+      <Name>ByA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{49134EE2-622E-40E3-B71C-78D5118FB05E}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{3FAA6732-648C-4B58-BA49-76DFFB7937BD}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Financiero\Financiero.csproj">
+      <Project>{5A433C38-EF24-4DED-95FB-45C6AD16DDDA}</Project>
+      <Name>Financiero</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GDocWord\GDocWord.vbproj">
+      <Project>{DB89CC30-B6D4-452B-ACEA-4DC947F274EC}</Project>
+      <Name>GDocWord</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

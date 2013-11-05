@@ -1,0 +1,41 @@
+﻿#page /*El contenedor de toda la master*/
+	{
+	
+	margin:0px auto 0px auto;
+	width:1000px;
+	height:auto;
+	top:0px;
+	background-color:Blue;
+	
+		
+	}
+
+#recuadrocont /*Contenedor del area de trabajo*/
+    {
+        width:200px;
+        height:auto;       
+        position:absolute;
+        margin:20px 20px 10px 10px;
+        float:left;
+        z-index:1;
+    }
+
+#contencenter /*Area de trabajo width:918px;*/
+    {
+        width:730px;
+        height:auto;
+        padding:5px;
+        z-index:1;
+        font-family:Tahoma, Aria;
+	    font-size:small;
+	    color:#7f8080;
+	    overflow-x:hidden;
+	    overflow-y:auto;	    
+        margin-left:210px;
+        margin-right:0px;
+        margin-top:0px;
+        min-height: 420px;
+	    
+    }
+    
+    

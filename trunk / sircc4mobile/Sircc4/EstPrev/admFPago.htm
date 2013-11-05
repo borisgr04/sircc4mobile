@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/admFPago.js" type="text/javascript"></script>
+    <style type="text/css">
+        .editedRow
+        {
+            color: #b90f0f;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div id="msgFPEditar" class="information">
+            Puede editar haciendo click sobre la celda.</div>
+        <div>
+            <div id="jqxgridFP">
+            </div>
+            <div id="divBtnGridFP">
+            </div>
+        </div>
+        <!-- -->
+        
+                            
+        <div id="wFP">
+            <div id="wHFP">
+                <span>Agregar/Editar Item </span>
+            </div>
+            <div style="overflow: hidden;" id="wCFP">
+                <div id="msgFP" class="information">
+                    Diligenciar los datos de manera correcta.
+                </div>
+                <div>
+                    <!--<form id="testForm" action="./">-->
+                    <div class="form">
+                        <div class="filaform">
+                            <label for="CboTipPag">
+                                Tipo de Pago</label>
+                            <div style="font-size: 12px; font-family: Verdana;" id="CboTipPag">
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtOrden">
+                                Orden a imprimir</label>
+                            <div style="font-size: 12px; font-family: Verdana;" id="txtOrden">
+                            </div>
+                        </div>
+                        
+                        <div class="filaform">
+                            <label for="txtValPag">
+                                Valor</label>
+                            <div id="txtValPag" style="margin-top: 3px; float: left" />
+                            <div style='margin-top: 3px;' id='txtPorPag'>
+                            </div>
+                        </div>
+                        <div class="filaform">
+                            <label for="txtCond">
+                                Condición del Pago</label>
+                            <textarea id="txtCond" class="textareapq" name="txtCond"></textarea>
+                        </div>
+                        <div class="filaform">
+                            <label for="CboApoEnt">
+                                Aporte de la Entidad</label>
+                            <div style='margin-top: 3px;' id='CboApoEnt'>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="filaformBtn">
+                            <input type="button" value="Guardar" id="BtnFPGuardar" />
+                            <input type="button" value="Cancelar" id="BtnFPCancelar" />
+                        </div>
+                        <div class="filaformBtn" id="divBotones">
+                        </div>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

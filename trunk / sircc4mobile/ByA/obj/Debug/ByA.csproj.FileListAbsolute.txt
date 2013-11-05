@@ -1,0 +1,5 @@
+E:\ByA\snvSircc4\svnSircc4_27082013_4\ByA\bin\Debug\ByA.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\ByA\bin\Debug\ByA.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\ByA\obj\Debug\ByA.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\ByA\obj\Debug\ByA.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\ByA\obj\Debug\ByA.csprojResolveAssemblyReference.cache

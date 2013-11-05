@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Styles/Site.css" />
+    <link rel="stylesheet" type="text/css" href="jqwidgets/styles/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="jqwidgets/styles/jqx.metro.css" />
+    <script type="text/javascript" src="jqscripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxnavigationbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxWindow.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxGrid.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.filter.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxSplitter.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxExpander.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxTree.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="jqscripts/gettheme.js"></script>
+    <script type="text/javascript" src="jqscripts/bya_page.js"></script>
+    <script type="text/javascript" src="jqscripts/jquery_ext.js"> </script>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    SIRCC - Sistema de Radicación y Control de Contratos
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <!--   <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                 ocultar
+                -->
+                ZONA DE LOGIN
+            </div>
+            <div class="clear hideSkiplink">
+                <!--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                    </Items>
+                </asp:Menu>-->
+                ZONA DE MENU<br />
+                ZONA LOGIN
+            </div>
+        </div>
+        <div id="mainSplitter">
+            <div>
+                <div id="zonaMenu">
+                </div>
+                <!--
+                <div style="border: none;" id="feedExpander"> 
+                <div class="jqx-hideborder"> SIRCC</div>
+                <div class="jqx-hideborder jqx-hidescrollbars"> <div class="jqx-hideborder" id='jqxTree'>
+                <ul> <li item-expanded='true' id="Li1"> <img style='float: left; margin-right: 5px;'
+                src='jqwidgets/images/contactsIcon.png' /><span item-title="true">Estudios Previos</span>
+                <ul> <li> <img style='float: left; margin-right: 5px;' /><span item-title="true">Crear</span>
+                <ul> href='EstPrev/wfRgEstPrev.aspx?tip=EN' target="_blank" <li><a> <img style='float:
+                left; margin-right: 5px; src=""' /><span item-title="true">Nuevo</span> </a></li>
+                <li><a> <img style='float: left; margin-right: 5px; src=""' /><span item-title="true">Plantillas</span>
+                </a></li> <li> <img style='float: left; margin-right: 5px;' /><span item-title="true">Apartir
+                de Existente</span> </li> </ul> </li> <li> <a href=''> <img style='float: left;
+                margin-right: 5px; src=""' /> <span item-title="true">Abrir</span> </a></li> <li><a>
+                <img style='float: left; margin-right: 5px; src=""' /> <span item-title="true">Revisar</span>
+                </a></li> <li><a> <img style='float: left; margin-right: 5px; src=""' /> <span item-title="true">Aprobar</span>
+                </a></li> <li><a> <img style='float: left; margin-right: 5px; src=""' /> <span item-title="true">Consultar</span>
+                </a></li> <li><a> <img style='float: left; margin-right: 5px; src=""' /> <span item-title="true">Imprimir</span>
+                </a></li> </ul> </li> </ul> </div>
+            </div>
+        </div>
+        -->
+        <!-- <div style="border: none;" id="feedExpander2">
+                    <div class="jqx-hideborder">
+                        SIRCC</div>
+                    <div class="jqx-hideborder jqx-hidescrollbars">
+                        <div class="jqx-hideborder" id='jqxTree2'>
+                        </div>
+                    </div>
+                </div>-->
+    </div>
+    <div>
+        <div id="contentSplitter">
+            <div class="feed-item-list-container" id="feedUpperPanel">
+                <div class="jqx-hideborder" id="feedListExpander">
+                    <div id="feedHeader">
+                    </div>
+                    <div class="jqx-hideborder jqx-hidescrollbars">
+                        <div class="jqx-hideborder" id="feedContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="clear">
+        LIMPIO CLEAR
+    </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script type="text/javascript">
+        var theme;
+        $(document).ready(function () {
+            //$.data(document.body, 'theme', 'bootstrap');
+            $.data(document.body, 'theme', 'metro');
+            theme = getDemoTheme();
+            var url = "jqwidgets/styles/jqx." + theme + '.css';
+            $(document).find('head').append('<link rel="stylesheet" href="' + url + '" media="screen" />');
+        });
+    </script>
+    <script type="text/javascript">
+
+        function VerPlantillas() {
+            ModalNuevoEP.showWindow(function (ter) {
+
+            });
+        }
+
+        function pantallacompleta(pagina) {
+            var opciones = ("toolbar=no,location=no, directories=no, status=no, menubar=no ,scrollbars=no, resizable=no, fullscreen=yes");
+            window.open(pagina, "", opciones, false);
+        }
+
+
+        $(document).ready(function () {
+            var rss = (function ($) {
+                var createWidgets = function () {
+                    var theme = getDemoTheme();
+
+                    $('#mainSplitter').jqxSplitter({ theme: theme, width: 950, height: 600, panels: [{ size: 200, min: 100 }, { min: 700, size: 700}] });
+                    //$('#contentSplitter').jqxSplitter({ width: '100%', height: '100%', theme: theme, orientation: 'horizontal', panels: [{ size: 600, min: 100, collapsible: false }, { min: 0, collapsible: true}] });
+                    $("#feedExpander").jqxExpander({ toggleMode: 'click', showArrow: true, width: "100%", height: "200px", theme: theme,
+                        initContent: function () {
+                            //
+                            //$('#jqxTree').jqxTree({ height: '100%', width: '100%', theme: theme, source: cargarTree() });
+                        }
+                    });
+
+                    $("#feedExpander2").jqxExpander({ toggleMode: 'click', showArrow: true, width: "100%", height: "100%", theme: theme,
+                        initContent: function () {
+                            //
+                            //$('#jqxTree2').jqxTree({ height: '100%', width: '100%', theme: theme, source: cargarTree() });
+                        }
+                    });
+
+
+                    $("#feedListExpander").jqxExpander({
+                        toggleMode: 'none', showArrow: false, width: "100%", height: 800, theme: theme, initContent: function () {
+                            //$('#feedContainer').jqxpanel({ theme: theme,  width: '100%', height: '100%' });
+                        }
+                    });
+                };
+
+                var addEventListeners = function () {
+                    $('#jqxTree').on('select', function (event) {
+                        var item = $('#jqxTree').jqxTree('getItem', event.args.element);
+                        if (item.value != '') {
+                            getFeed(item.value);
+                        }
+                        else {
+                            alert("Nada");
+                        }
+                    });
+
+                };
+
+                var getFeed = function (feed) {
+                    config.currentFeed = feed;
+                    //feed = config.dataDir + '/' + feed + '.' + config.format;
+                    //feed = "/default/defNuevo.htm";
+                    //feed = "/EPConsultas/conEP.htm";
+                    loadFeed(feed);
+
+                };
+
+                var loadFeed = function (feed, callback) {
+                    $.get(feed, function (data) {
+                        config.feedContainer.html(data);
+                        displayFeedHeader("Enviar Titulo");
+                    });
+                };
+
+                var displayFeedHeader = function (header) {
+                    $("#feedListExpander").jqxExpander('setHeaderContent', header);
+                };
+
+
+                var dataDir = 'data';
+
+                var config = {
+                    feeds: { 'CNN.com': 'cnn', 'Geek.com': 'geek', 'ScienceDaily': 'sciencedaily' },
+                    format: 'txt',
+                    dataDir: dataDir,
+                    feedTree: $('#jqxTree'),
+                    feedContainer: $('#feedContainer'),
+                    feedItemContent: $('#feedItemContent'),
+                    feedItemHeader: $('#feedItemHeader'),
+                    feedUpperPanel: $('#feedUpperPanel'),
+                    feedHeader: $('#feedHeader'),
+                    feedContentArea: $('#feedContentArea'),
+                    selectedIndex: -1,
+                    currentFeed: '',
+                    currentFeedContent: {}
+                };
+
+                return {
+                    init: function () {
+                        createWidgets();
+                        addEventListeners();
+                        getFeed('sciencedaily');
+                    }
+                }
+
+            } (jQuery));
+
+            rss.init();
+            crearNaviagation();
+        });
+        function cargarTree() {
+            var data = [
+                { "id": "2",
+                    "parentid": "1",
+                    "text": "Crear",
+                    "value": ""
+                },
+                { "id": "15",
+                    "parentid": "2",
+                    "text": "Nuevo",
+                    "value": ""
+                }
+                ,
+                { "id": "16",
+                    "parentid": "2",
+                    "text": "Plantilla",
+                    "value": "/default/defNuevo.htm"
+                }
+                ,
+                { "id": "17",
+                    "parentid": "2",
+                    "text": "Apartir de Existente",
+                    "value": "/default/defNuevo.htm"
+                }
+                , {
+                    "id": "3",
+                    "parentid": "1",
+                    "text": "Abrir",
+                    "value": "/EPConsultas/conEP.htm"
+                }, {
+                    "id": "4",
+                    "parentid": "1",
+                    "text": "Revisar",
+                    "value": "/EPConsultas/conEP.htm"
+                }, {
+                    "id": "5",
+                    "parentid": "1",
+                    "text": "Aprobar",
+                    "value": "/EPConsultas/conEP.htm"
+                }, {
+                    "text": "Estudios Previos",
+                    "id": "1",
+                    "parentid": "-1",
+                    "value": "EP"
+                }, {
+                    "id": "6",
+                    "text": "Solicitudes",
+                    "parentid": "-1",
+                    "value": "$2.3"
+                }, {
+                    "id": "7",
+                    "parentid": "6",
+                    "text": "Caffe Americano",
+                    "value": "$2.3"
+                }, {
+                    "id": "8",
+                    "text": "Caffe Latte",
+                    "parentid": "6",
+                    "value": "$2.3"
+                }, {
+                    "id": "9",
+                    "text": "Caffe Mocha",
+                    "parentid": "6",
+                    "value": "$2.3"
+                }, {
+                    "id": "10",
+                    "text": "Cappuccino",
+                    "parentid": "6",
+                    "value": "$2.3"
+                }, {
+                    "id": "11",
+                    "text": "Pumpkin Spice Latte",
+                    "parentid": "6",
+                    "value": "$2.3"
+                }, {
+                    "id": "12",
+                    "text": "Contratos",
+                    "parentid": "-1"
+                }, {
+                    "id": "13",
+                    "text": "Caffe Vanilla Frappuccino",
+                    "parentid": "12",
+                    "value": "$2.3"
+                }, {
+                    "id": "15",
+                    "text": "450 calories",
+                    "parentid": "13",
+                    "value": "$2.3"
+                }, {
+                    "id": "16",
+                    "text": "16g fat",
+                    "parentid": "13",
+                    "value": "$2.3"
+                }, {
+                    "id": "17",
+                    "text": "13g protein",
+                    "parentid": "13",
+                    "value": "$2.3"
+                }, {
+                    "id": "14",
+                    "text": "Caffe Vanilla Frappuccino Light",
+                    "parentid": "12",
+                    "value": "$2.3"
+                }]
+
+            // prepare the data
+            var source =
+                {
+                    datatype: "json",
+                    datafields: [
+                        { name: 'id' },
+                        { name: 'parentid' },
+                        { name: 'text' },
+                        { name: 'value' }
+                    ],
+                    id: 'id',
+                    localdata: data
+                };
+
+            // create data adapter.
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            // perform Data Binding.
+            dataAdapter.dataBind();
+            // get the tree items. The first parameter is the item's id. The second parameter is the parent item's id. The 'items' parameter represents 
+            // the sub items collection name. Each jqxTree item has a 'label' property, but in the JSON data, we have a 'text' field. The last parameter 
+            // specifies the mapping between the 'text' and 'label' fields.  
+            var records = dataAdapter.getRecordsHierarchy('id', 'parentid', 'items', [{ name: 'text', map: 'label'}]);
+            return records;
+        }
+
+        function crearNaviagation() {
+
+            var idNav = "Nav";
+
+            function crearItem(i, titulo, urlimg) {
+                var str = "<div>";
+                str += "<div style='margin-top: 2px;'><div style='float: left;'><img alt='Mail' src='" + urlimg + "' /></div>";
+                str += "<div style='margin-left: 4px; float: left;'>" + titulo + "</div>";
+                str += "</div></div>"
+                str += "<div>";
+                str += '<div id="jqxMTree' + i + '"></div>';
+                str += "</div>";
+                return str;
+            }
+
+            function cargarTree(modulo) {
+                var param = "{modulo:'" + modulo + "',usuario:'" + "boris" + "'}";
+                var data = byaPage.postSource("/Servicios/wsMenu.asmx/GetMenu", param);
+                var source =
+                {
+                    datatype: "json",
+                    datafields: [
+                        { name: 'id' },
+                        { name: 'parentid' },
+                        { name: 'text' },
+                        { name: 'value' }
+                    ],
+                    id: 'id',
+                    localdata: data
+                };
+
+                // create data adapter.
+                var dataAdapter = new $.jqx.dataAdapter(source);
+                // perform Data Binding.
+                dataAdapter.dataBind();
+                // get the tree items. The first parameter is the item's id. The second parameter is the parent item's id. The 'items' parameter represents 
+                // the sub items collection name. Each jqxTree item has a 'label' property, but in the JSON data, we have a 'text' field. The last parameter 
+                // specifies the mapping between the 'text' and 'label' fields.  
+                var records = dataAdapter.getRecordsHierarchy('id', 'parentid', 'items', [{ name: 'text', map: 'label'}]);
+                return records;
+            }
+            var str = "<div id=" + idNav + ">";
+            str += crearItem(1, "PROCESOS");
+            str += crearItem(2, "CONTRATOS");
+            str += "</div>";
+            $("#zonaMenu").append(str);
+
+            $("#Nav").jqxNavigationBar({ height: '300', width: 200, expandMode: 'multiple', expandedIndexes: [2, 3], theme: theme });
+            $('#jqxMTree1').jqxTree({ height: '300', width: '300', theme: theme, source: cargarTree("PREC") });
+            $('#jqxMTree2').jqxTree({ height: '300', width: '300', theme: theme, source: cargarTree("CONT") });
+
+        }
+
+        
+           
+    </script>
+</body>
+</html>

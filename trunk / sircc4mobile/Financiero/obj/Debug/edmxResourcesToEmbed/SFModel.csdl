@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIF_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SIF_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DCOMPROMISO" EntityType="SIF_Model.DCOMPROMISO" />
+    <EntitySet Name="DEGRESO" EntityType="SIF_Model.DEGRESO" />
+    <EntitySet Name="DRESERVA" EntityType="SIF_Model.DRESERVA" />
+    <EntitySet Name="MCOMPROMISO" EntityType="SIF_Model.MCOMPROMISO" />
+    <EntitySet Name="MEGRESO" EntityType="SIF_Model.MEGRESO" />
+    <EntitySet Name="MORDEN" EntityType="SIF_Model.MORDEN" />
+    <EntitySet Name="MORDEN_EGRESO" EntityType="SIF_Model.MORDEN_EGRESO" />
+    <EntitySet Name="MRESERVA" EntityType="SIF_Model.MRESERVA" />
+    <AssociationSet Name="FK_DCOMPROMISO_1" Association="SIF_Model.FK_DCOMPROMISO_1">
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+      <End Role="DCOMPROMISO" EntitySet="DCOMPROMISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DRESERVA_1" Association="SIF_Model.FK_DRESERVA_1">
+      <End Role="MRESERVA" EntitySet="MRESERVA" />
+      <End Role="DRESERVA" EntitySet="DRESERVA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MCOMPROMISO_1" Association="SIF_Model.FK_MCOMPROMISO_1">
+      <End Role="MRESERVA" EntitySet="MRESERVA" />
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MORDEN_2" Association="SIF_Model.FK_MORDEN_2">
+      <End Role="MCOMPROMISO" EntitySet="MCOMPROMISO" />
+      <End Role="MORDEN" EntitySet="MORDEN" />
+    </AssociationSet>
+    <EntitySet Name="PPTO_GASTOS_V1" EntityType="SIF_Model.PPTO_GASTOS_V1" />
+  </EntityContainer>
+  <EntityType Name="DCOMPROMISO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_COMPROMISO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="COD_UNIDAD" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_GASTO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_RECURSO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VAL_COMPROMISO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_OBLIGACION" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_TRAMITE" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGOS" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_ANTICIPO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="TIP_PAC" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="COD_PAC" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="MCOMPROMISO" Relationship="SIF_Model.FK_DCOMPROMISO_1" FromRole="DCOMPROMISO" ToRole="MCOMPROMISO" />
+  </EntityType>
+  <EntityType Name="DEGRESO">
+    <Key>
+      <PropertyRef Name="NUM_EGRESO" />
+      <PropertyRef Name="CLS_EGRESO" />
+      <PropertyRef Name="FORMA_PAGO" />
+      <PropertyRef Name="NIT" />
+      <PropertyRef Name="BEN_CHEQUE" />
+      <PropertyRef Name="NRO_CTABANCARIA" />
+      <PropertyRef Name="COD_BANCO" />
+      <PropertyRef Name="VAL_TOTAL" />
+      <PropertyRef Name="VAL_NETO" />
+      <PropertyRef Name="MONTO_ESCRITO" />
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="NUM_EGRESO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CLS_EGRESO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FORMA_PAGO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NIT" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="BEN_CHEQUE" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="NRO_CTABANCARIA" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="COD_BANCO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NRO_CHEQUE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="VAL_TOTAL" Type="Decimal" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="VAL_NETO" Type="Decimal" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="FEC_PAGO" Type="DateTime" />
+    <Property Name="MONTO_ESCRITO" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="COD_UNIDAD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SEC_OPERACION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_ENTREGA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_ENTREGA" Type="DateTime" />
+    <Property Name="CTA_BANCO" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="COD_BANCO_NIT" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TIPO_CTA_BANCO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="DRESERVA">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_CERTIFICADO" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CERTIFICADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="COD_UNIDAD" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_GASTO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_RECURSO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="VAL_CERTIFICADO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_COMPROMISO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_OBLIGACION" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGOS" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="TRAMITE_CONTRATO" Type="Decimal" Precision="17" Scale="2" />
+    <NavigationProperty Name="MRESERVA" Relationship="SIF_Model.FK_DRESERVA_1" FromRole="DRESERVA" ToRole="MRESERVA" />
+  </EntityType>
+  <EntityType Name="MCOMPROMISO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_COMPROMISO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FEC_COMPROMISO" Type="DateTime" Nullable="false" />
+    <Property Name="OBJ_COMPROMISO" Type="String" Nullable="false" MaxLength="2500" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_CERTIFICADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TIPO_COMPROMISO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NRO_DOCUMENTO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CLASE_DOCUMENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FEC_DOCUMENTO" Type="DateTime" Nullable="false" />
+    <Property Name="FEC_VENCE_DOCUMENTO" Type="DateTime" />
+    <Property Name="FORMALIDADES_PLENAS" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NIT" Type="String" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="COD_CENTRO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_REGION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FEC_ANULADO" Type="DateTime" />
+    <Property Name="CONTRIBUCION" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="RP_CONTRIBUCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CASTIGO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NUM_COMPROMISO_VA" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="COD_DEPTO" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="COD_MUNIC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VALOR_CAMBIO" Type="Decimal" Nullable="false" Precision="17" Scale="5" />
+    <NavigationProperty Name="DCOMPROMISO" Relationship="SIF_Model.FK_DCOMPROMISO_1" FromRole="MCOMPROMISO" ToRole="DCOMPROMISO" />
+    <NavigationProperty Name="MRESERVA" Relationship="SIF_Model.FK_MCOMPROMISO_1" FromRole="MCOMPROMISO" ToRole="MRESERVA" />
+    <NavigationProperty Name="MORDEN" Relationship="SIF_Model.FK_MORDEN_2" FromRole="MCOMPROMISO" ToRole="MORDEN" />
+  </EntityType>
+  <EntityType Name="MEGRESO">
+    <Key>
+      <PropertyRef Name="NUM_EGRESO" />
+      <PropertyRef Name="CLS_EGRESO" />
+      <PropertyRef Name="FEC_EGRESO" />
+      <PropertyRef Name="CON_EGRESO" />
+      <PropertyRef Name="ORIGEN" />
+      <PropertyRef Name="VAL_EGRESO" />
+      <PropertyRef Name="ESTADO" />
+      <PropertyRef Name="CLASIFICACION" />
+      <PropertyRef Name="MB_MO" />
+      <PropertyRef Name="CHK_PARTIALPAY" />
+      <PropertyRef Name="VALOR_CAMBIO" />
+      <PropertyRef Name="DEVOLUCION" />
+    </Key>
+    <Property Name="NUM_EGRESO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CLS_EGRESO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FEC_EGRESO" Type="DateTime" Nullable="false" />
+    <Property Name="CON_EGRESO" Type="String" Nullable="false" MaxLength="2500" Unicode="false" FixedLength="false" />
+    <Property Name="COD_ORDEN" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ORIGEN" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="VAL_EGRESO" Type="Decimal" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="SEC_OPERACION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CLASIFICACION" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="COD_UNIDAD" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MB_MO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MONTO_ESCRITO" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="CHK_PARTIALPAY" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="VALOR_CAMBIO" Type="Decimal" Nullable="false" Precision="17" Scale="5" />
+    <Property Name="COD_MONEDA" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+    <Property Name="DEVOLUCION" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="MORDEN">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_ORDEN" />
+      <PropertyRef Name="OBJ_ORDEN" />
+      <PropertyRef Name="COD_ORDEN" />
+      <PropertyRef Name="VIG_COMPROMISO" />
+      <PropertyRef Name="NUM_COMPROMISO" />
+      <PropertyRef Name="ESTADO_ORDEN" />
+      <PropertyRef Name="FEC_RADICACION" />
+      <PropertyRef Name="NIT" />
+      <PropertyRef Name="ANTICIPO" />
+      <PropertyRef Name="AMORTIZA" />
+      <PropertyRef Name="FIDUCIA" />
+      <PropertyRef Name="MULTIPLES_PAGO" />
+      <PropertyRef Name="VAL_AMORTIZADO" />
+      <PropertyRef Name="VALOR_CAMBIO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_ORDEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="OBJ_ORDEN" Type="String" Nullable="false" MaxLength="2500" Unicode="false" FixedLength="false" />
+    <Property Name="COD_ORDEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VIG_COMPROMISO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_COMPROMISO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NRO_FACTURA" Type="String" MaxLength="15" Unicode="false" FixedLength="true" />
+    <Property Name="FEC_FACTURA" Type="DateTime" />
+    <Property Name="FEC_VENC_FACT" Type="DateTime" />
+    <Property Name="VAL_TOTAL" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_NETO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="VAL_PAGADO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="ESTADO_ORDEN" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+    <Property Name="FEC_RADICACION" Type="DateTime" Nullable="false" />
+    <Property Name="FEC_PENDIENTE" Type="DateTime" />
+    <Property Name="FEC_APROBACION" Type="DateTime" />
+    <Property Name="FEC_CAUSACION" Type="DateTime" />
+    <Property Name="FEC_PROGPAGO" Type="DateTime" />
+    <Property Name="NUM_EGRESO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CLS_EGRESO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FEC_EGRESO" Type="DateTime" />
+    <Property Name="OP_CONTRIBUCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NIT" Type="String" Nullable="false" MaxLength="13" Unicode="false" FixedLength="false" />
+    <Property Name="ANTICIPO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="AMORTIZA" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FIDUCIA" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="MULTIPLES_PAGO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="VAL_AMORTIZADO" Type="Decimal" Nullable="false" Precision="17" Scale="2" />
+    <Property Name="COD_CENTRO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_REGION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="COD_DEPTO" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="COD_MUNIC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VALOR_CAMBIO" Type="Decimal" Nullable="false" Precision="17" Scale="5" />
+    <NavigationProperty Name="MCOMPROMISO" Relationship="SIF_Model.FK_MORDEN_2" FromRole="MORDEN" ToRole="MCOMPROMISO" />
+  </EntityType>
+  <EntityType Name="MORDEN_EGRESO">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_ORDEN" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_ORDEN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_EGRESO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CLS_EGRESO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FEC_EGRESO" Type="DateTime" />
+    <Property Name="VAL_PAGADO" Type="Decimal" Precision="17" Scale="2" />
+  </EntityType>
+  <EntityType Name="MRESERVA">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="NUM_CERTIFICADO" />
+    </Key>
+    <Property Name="VIGENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CERTIFICADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FEC_EXPEDICION" Type="DateTime" Nullable="false" />
+    <Property Name="FEC_VENCIMIENTO" Type="DateTime" Nullable="false" />
+    <Property Name="NRO_PRORROGA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="OBJ_CERTIFICADO" Type="String" Nullable="false" MaxLength="2500" Unicode="false" FixedLength="false" />
+    <Property Name="DEP_SOLICITANTE" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FEC_ANULADO" Type="DateTime" />
+    <Property Name="VIG_FUTURA" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TRAMITE_CONTRATO" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="CONTRIBUCION" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CDP_CONTRIBUCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NUM_CERTIFICADO_VA" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="INT_PREVIO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CDP_MACRO_PREVIO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="VALOR_CAMBIO" Type="Decimal" Nullable="false" Precision="17" Scale="5" />
+    <NavigationProperty Name="DRESERVA" Relationship="SIF_Model.FK_DRESERVA_1" FromRole="MRESERVA" ToRole="DRESERVA" />
+    <NavigationProperty Name="MCOMPROMISO" Relationship="SIF_Model.FK_MCOMPROMISO_1" FromRole="MRESERVA" ToRole="MCOMPROMISO" />
+  </EntityType>
+  <Association Name="FK_DCOMPROMISO_1">
+    <End Role="MCOMPROMISO" Type="SIF_Model.MCOMPROMISO" Multiplicity="1" />
+    <End Role="DCOMPROMISO" Type="SIF_Model.DCOMPROMISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Principal>
+      <Dependent Role="DCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DRESERVA_1">
+    <End Role="MRESERVA" Type="SIF_Model.MRESERVA" Multiplicity="1" />
+    <End Role="DRESERVA" Type="SIF_Model.DRESERVA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Principal>
+      <Dependent Role="DRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MCOMPROMISO_1">
+    <End Role="MRESERVA" Type="SIF_Model.MRESERVA" Multiplicity="1" />
+    <End Role="MCOMPROMISO" Type="SIF_Model.MCOMPROMISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRESERVA">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Principal>
+      <Dependent Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_CERTIFICADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MORDEN_2">
+    <End Role="MCOMPROMISO" Type="SIF_Model.MCOMPROMISO" Multiplicity="1" />
+    <End Role="MORDEN" Type="SIF_Model.MORDEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MCOMPROMISO">
+        <PropertyRef Name="VIGENCIA" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Principal>
+      <Dependent Role="MORDEN">
+        <PropertyRef Name="VIG_COMPROMISO" />
+        <PropertyRef Name="NUM_COMPROMISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PPTO_GASTOS_V1">
+    <Key>
+      <PropertyRef Name="VIGENCIA" />
+      <PropertyRef Name="COD_UNIDAD" />
+      <PropertyRef Name="COD_GASTO" />
+      <PropertyRef Name="COD_RECURSO" />
+      <PropertyRef Name="NOM_GASTO" />
+      <PropertyRef Name="APROP_INICIAL" />
+      <PropertyRef Name="TIP_PAC" />
+      <PropertyRef Name="COD_PAC" />
+      <PropertyRef Name="CON_SITUACION" />
+      <PropertyRef Name="DIS_INTERNA" />
+      <PropertyRef Name="NIVEL" />
+    </Key>
+    <Property Type="Decimal" Name="VIGENCIA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="COD_UNIDAD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_GASTO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COD_RECURSO" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOM_GASTO" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="APROP_INICIAL" Nullable="false" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_ADICIONAL" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_REDUCIDA" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_DEFINITIVA" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CONGELACIONES" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="CERTIFICACIONES" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_DISPONIBLE" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COMPROMISOS" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="OBLIGACIONES" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="PAGOS" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_POR_COMPROMETER" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SAL_CERTIFICADOS" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SAL_COMPROMISOS" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CUENTAS_POR_PAGAR" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="RES_CAJA" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="RES_APROPIACION" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="APROP_TRAMITE" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="REINTEGROS" Precision="17" Scale="2" />
+    <Property Type="String" Name="TIP_PAC" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="COD_PAC" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="CON_SITUACION" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DIS_INTERNA" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="NIVEL_INTERNO" Precision="38" Scale="0" />
+    <Property Type="String" Name="RUBRO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUBRO_AUX" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GASTO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GASTO_AUX" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLASE" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUENTA" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBCUENTA" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OBJETO" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ORDINAL" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBORDINAL" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX1" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX2" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX3" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX4" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX5" MaxLength="44" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NIVEL_AUX6" MaxLength="48" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CTRL_RESERVA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NIVEL" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+</Schema>

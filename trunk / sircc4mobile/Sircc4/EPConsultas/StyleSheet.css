@@ -1,0 +1,46 @@
+﻿/* 
+INICIO FORM CAPUTA
+*/
+.formConEP {
+color:#333333;
+min-height:400px;
+padding:20px ;
+font-size:11px;
+}
+
+.formConEP .filaform
+{
+    width:95%;
+    padding:1px;
+    margin:2px;
+    vertical-align:middle;
+}
+
+.formConEP .filaform:hover
+{
+    background:#E1EEf4;
+    color:#00557F;
+}  
+.formConEP span{
+    float:left;
+    font-size:12px;
+    text-align:left;
+    width:60px;
+    vertical-align:middle;
+    padding-left:10px;
+    padding-right:5px;
+    padding-top:5px;
+    height:100%;
+}
+.formConEP label{
+    display:inline-block;
+    font-size:12px;
+    text-align:left;
+    width:100px;
+    float:left;
+    vertical-align:middle;
+    padding-right:5px;
+    padding-top:5px;
+    height:100%;
+}
+/* 

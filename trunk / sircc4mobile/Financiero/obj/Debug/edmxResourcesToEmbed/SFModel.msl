@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIF_ModelStoreContainer" CdmEntityContainer="SIF_Entities">
+    <EntitySetMapping Name="DCOMPROMISO">
+      <EntityTypeMapping TypeName="SIF_Model.DCOMPROMISO">
+        <MappingFragment StoreEntitySet="DCOMPROMISO">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_COMPROMISO" ColumnName="NUM_COMPROMISO" />
+          <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+          <ScalarProperty Name="COD_GASTO" ColumnName="COD_GASTO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="VAL_COMPROMISO" ColumnName="VAL_COMPROMISO" />
+          <ScalarProperty Name="VAL_OBLIGACION" ColumnName="VAL_OBLIGACION" />
+          <ScalarProperty Name="VAL_TRAMITE" ColumnName="VAL_TRAMITE" />
+          <ScalarProperty Name="VAL_PAGOS" ColumnName="VAL_PAGOS" />
+          <ScalarProperty Name="VAL_ANTICIPO" ColumnName="VAL_ANTICIPO" />
+          <ScalarProperty Name="TIP_PAC" ColumnName="TIP_PAC" />
+          <ScalarProperty Name="COD_PAC" ColumnName="COD_PAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEGRESO">
+      <EntityTypeMapping TypeName="SIF_Model.DEGRESO">
+        <MappingFragment StoreEntitySet="DEGRESO">
+          <ScalarProperty Name="NUM_EGRESO" ColumnName="NUM_EGRESO" />
+          <ScalarProperty Name="CLS_EGRESO" ColumnName="CLS_EGRESO" />
+          <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="BEN_CHEQUE" ColumnName="BEN_CHEQUE" />
+          <ScalarProperty Name="NRO_CTABANCARIA" ColumnName="NRO_CTABANCARIA" />
+          <ScalarProperty Name="COD_BANCO" ColumnName="COD_BANCO" />
+          <ScalarProperty Name="NRO_CHEQUE" ColumnName="NRO_CHEQUE" />
+          <ScalarProperty Name="VAL_TOTAL" ColumnName="VAL_TOTAL" />
+          <ScalarProperty Name="VAL_NETO" ColumnName="VAL_NETO" />
+          <ScalarProperty Name="FEC_PAGO" ColumnName="FEC_PAGO" />
+          <ScalarProperty Name="MONTO_ESCRITO" ColumnName="MONTO_ESCRITO" />
+          <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+          <ScalarProperty Name="SEC_OPERACION" ColumnName="SEC_OPERACION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="USUARIO_ENTREGA" ColumnName="USUARIO_ENTREGA" />
+          <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+          <ScalarProperty Name="CTA_BANCO" ColumnName="CTA_BANCO" />
+          <ScalarProperty Name="COD_BANCO_NIT" ColumnName="COD_BANCO_NIT" />
+          <ScalarProperty Name="TIPO_CTA_BANCO" ColumnName="TIPO_CTA_BANCO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRESERVA">
+      <EntityTypeMapping TypeName="SIF_Model.DRESERVA">
+        <MappingFragment StoreEntitySet="DRESERVA">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_CERTIFICADO" ColumnName="NUM_CERTIFICADO" />
+          <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+          <ScalarProperty Name="COD_GASTO" ColumnName="COD_GASTO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="VAL_CERTIFICADO" ColumnName="VAL_CERTIFICADO" />
+          <ScalarProperty Name="VAL_COMPROMISO" ColumnName="VAL_COMPROMISO" />
+          <ScalarProperty Name="VAL_OBLIGACION" ColumnName="VAL_OBLIGACION" />
+          <ScalarProperty Name="VAL_PAGOS" ColumnName="VAL_PAGOS" />
+          <ScalarProperty Name="TRAMITE_CONTRATO" ColumnName="TRAMITE_CONTRATO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MCOMPROMISO">
+      <EntityTypeMapping TypeName="SIF_Model.MCOMPROMISO">
+        <MappingFragment StoreEntitySet="MCOMPROMISO">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_COMPROMISO" ColumnName="NUM_COMPROMISO" />
+          <ScalarProperty Name="FEC_COMPROMISO" ColumnName="FEC_COMPROMISO" />
+          <ScalarProperty Name="OBJ_COMPROMISO" ColumnName="OBJ_COMPROMISO" />
+          <ScalarProperty Name="NUM_CERTIFICADO" ColumnName="NUM_CERTIFICADO" />
+          <ScalarProperty Name="TIPO_COMPROMISO" ColumnName="TIPO_COMPROMISO" />
+          <ScalarProperty Name="NRO_DOCUMENTO" ColumnName="NRO_DOCUMENTO" />
+          <ScalarProperty Name="CLASE_DOCUMENTO" ColumnName="CLASE_DOCUMENTO" />
+          <ScalarProperty Name="FEC_DOCUMENTO" ColumnName="FEC_DOCUMENTO" />
+          <ScalarProperty Name="FEC_VENCE_DOCUMENTO" ColumnName="FEC_VENCE_DOCUMENTO" />
+          <ScalarProperty Name="FORMALIDADES_PLENAS" ColumnName="FORMALIDADES_PLENAS" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="COD_CENTRO" ColumnName="COD_CENTRO" />
+          <ScalarProperty Name="COD_REGION" ColumnName="COD_REGION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FEC_ANULADO" ColumnName="FEC_ANULADO" />
+          <ScalarProperty Name="CONTRIBUCION" ColumnName="CONTRIBUCION" />
+          <ScalarProperty Name="RP_CONTRIBUCION" ColumnName="RP_CONTRIBUCION" />
+          <ScalarProperty Name="CASTIGO" ColumnName="CASTIGO" />
+          <ScalarProperty Name="NUM_COMPROMISO_VA" ColumnName="NUM_COMPROMISO_VA" />
+          <ScalarProperty Name="COD_DEPTO" ColumnName="COD_DEPTO" />
+          <ScalarProperty Name="COD_MUNIC" ColumnName="COD_MUNIC" />
+          <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEGRESO">
+      <EntityTypeMapping TypeName="SIF_Model.MEGRESO">
+        <MappingFragment StoreEntitySet="MEGRESO">
+          <ScalarProperty Name="NUM_EGRESO" ColumnName="NUM_EGRESO" />
+          <ScalarProperty Name="CLS_EGRESO" ColumnName="CLS_EGRESO" />
+          <ScalarProperty Name="FEC_EGRESO" ColumnName="FEC_EGRESO" />
+          <ScalarProperty Name="CON_EGRESO" ColumnName="CON_EGRESO" />
+          <ScalarProperty Name="COD_ORDEN" ColumnName="COD_ORDEN" />
+          <ScalarProperty Name="ORIGEN" ColumnName="ORIGEN" />
+          <ScalarProperty Name="VAL_EGRESO" ColumnName="VAL_EGRESO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="SEC_OPERACION" ColumnName="SEC_OPERACION" />
+          <ScalarProperty Name="CLASIFICACION" ColumnName="CLASIFICACION" />
+          <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+          <ScalarProperty Name="MB_MO" ColumnName="MB_MO" />
+          <ScalarProperty Name="MONTO_ESCRITO" ColumnName="MONTO_ESCRITO" />
+          <ScalarProperty Name="CHK_PARTIALPAY" ColumnName="CHK_PARTIALPAY" />
+          <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+          <ScalarProperty Name="COD_MONEDA" ColumnName="COD_MONEDA" />
+          <ScalarProperty Name="DEVOLUCION" ColumnName="DEVOLUCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MORDEN">
+      <EntityTypeMapping TypeName="SIF_Model.MORDEN">
+        <MappingFragment StoreEntitySet="MORDEN">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="OBJ_ORDEN" ColumnName="OBJ_ORDEN" />
+          <ScalarProperty Name="COD_ORDEN" ColumnName="COD_ORDEN" />
+          <ScalarProperty Name="VIG_COMPROMISO" ColumnName="VIG_COMPROMISO" />
+          <ScalarProperty Name="NUM_COMPROMISO" ColumnName="NUM_COMPROMISO" />
+          <ScalarProperty Name="NRO_FACTURA" ColumnName="NRO_FACTURA" />
+          <ScalarProperty Name="FEC_FACTURA" ColumnName="FEC_FACTURA" />
+          <ScalarProperty Name="FEC_VENC_FACT" ColumnName="FEC_VENC_FACT" />
+          <ScalarProperty Name="VAL_TOTAL" ColumnName="VAL_TOTAL" />
+          <ScalarProperty Name="VAL_NETO" ColumnName="VAL_NETO" />
+          <ScalarProperty Name="VAL_PAGADO" ColumnName="VAL_PAGADO" />
+          <ScalarProperty Name="ESTADO_ORDEN" ColumnName="ESTADO_ORDEN" />
+          <ScalarProperty Name="FEC_RADICACION" ColumnName="FEC_RADICACION" />
+          <ScalarProperty Name="FEC_PENDIENTE" ColumnName="FEC_PENDIENTE" />
+          <ScalarProperty Name="FEC_APROBACION" ColumnName="FEC_APROBACION" />
+          <ScalarProperty Name="FEC_CAUSACION" ColumnName="FEC_CAUSACION" />
+          <ScalarProperty Name="FEC_PROGPAGO" ColumnName="FEC_PROGPAGO" />
+          <ScalarProperty Name="NUM_EGRESO" ColumnName="NUM_EGRESO" />
+          <ScalarProperty Name="CLS_EGRESO" ColumnName="CLS_EGRESO" />
+          <ScalarProperty Name="FEC_EGRESO" ColumnName="FEC_EGRESO" />
+          <ScalarProperty Name="OP_CONTRIBUCION" ColumnName="OP_CONTRIBUCION" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="ANTICIPO" ColumnName="ANTICIPO" />
+          <ScalarProperty Name="AMORTIZA" ColumnName="AMORTIZA" />
+          <ScalarProperty Name="FIDUCIA" ColumnName="FIDUCIA" />
+          <ScalarProperty Name="MULTIPLES_PAGO" ColumnName="MULTIPLES_PAGO" />
+          <ScalarProperty Name="VAL_AMORTIZADO" ColumnName="VAL_AMORTIZADO" />
+          <ScalarProperty Name="COD_CENTRO" ColumnName="COD_CENTRO" />
+          <ScalarProperty Name="COD_REGION" ColumnName="COD_REGION" />
+          <ScalarProperty Name="COD_DEPTO" ColumnName="COD_DEPTO" />
+          <ScalarProperty Name="COD_MUNIC" ColumnName="COD_MUNIC" />
+          <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MORDEN_EGRESO">
+      <EntityTypeMapping TypeName="SIF_Model.MORDEN_EGRESO">
+        <MappingFragment StoreEntitySet="MORDEN_EGRESO">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_ORDEN" ColumnName="NUM_ORDEN" />
+          <ScalarProperty Name="NUM_EGRESO" ColumnName="NUM_EGRESO" />
+          <ScalarProperty Name="CLS_EGRESO" ColumnName="CLS_EGRESO" />
+          <ScalarProperty Name="FEC_EGRESO" ColumnName="FEC_EGRESO" />
+          <ScalarProperty Name="VAL_PAGADO" ColumnName="VAL_PAGADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MRESERVA">
+      <EntityTypeMapping TypeName="SIF_Model.MRESERVA">
+        <MappingFragment StoreEntitySet="MRESERVA">
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="NUM_CERTIFICADO" ColumnName="NUM_CERTIFICADO" />
+          <ScalarProperty Name="FEC_EXPEDICION" ColumnName="FEC_EXPEDICION" />
+          <ScalarProperty Name="FEC_VENCIMIENTO" ColumnName="FEC_VENCIMIENTO" />
+          <ScalarProperty Name="NRO_PRORROGA" ColumnName="NRO_PRORROGA" />
+          <ScalarProperty Name="OBJ_CERTIFICADO" ColumnName="OBJ_CERTIFICADO" />
+          <ScalarProperty Name="DEP_SOLICITANTE" ColumnName="DEP_SOLICITANTE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FEC_ANULADO" ColumnName="FEC_ANULADO" />
+          <ScalarProperty Name="VIG_FUTURA" ColumnName="VIG_FUTURA" />
+          <ScalarProperty Name="TRAMITE_CONTRATO" ColumnName="TRAMITE_CONTRATO" />
+          <ScalarProperty Name="CONTRIBUCION" ColumnName="CONTRIBUCION" />
+          <ScalarProperty Name="CDP_CONTRIBUCION" ColumnName="CDP_CONTRIBUCION" />
+          <ScalarProperty Name="NUM_CERTIFICADO_VA" ColumnName="NUM_CERTIFICADO_VA" />
+          <ScalarProperty Name="INT_PREVIO" ColumnName="INT_PREVIO" />
+          <ScalarProperty Name="CDP_MACRO_PREVIO" ColumnName="CDP_MACRO_PREVIO" />
+          <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPTO_GASTOS_V1">
+      <EntityTypeMapping TypeName="SIF_Model.PPTO_GASTOS_V1">
+        <MappingFragment StoreEntitySet="PPTO_GASTOS_V1">
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="CTRL_RESERVA" ColumnName="CTRL_RESERVA" />
+          <ScalarProperty Name="NIVEL_AUX6" ColumnName="NIVEL_AUX6" />
+          <ScalarProperty Name="NIVEL_AUX5" ColumnName="NIVEL_AUX5" />
+          <ScalarProperty Name="NIVEL_AUX4" ColumnName="NIVEL_AUX4" />
+          <ScalarProperty Name="NIVEL_AUX3" ColumnName="NIVEL_AUX3" />
+          <ScalarProperty Name="NIVEL_AUX2" ColumnName="NIVEL_AUX2" />
+          <ScalarProperty Name="NIVEL_AUX1" ColumnName="NIVEL_AUX1" />
+          <ScalarProperty Name="SUBORDINAL" ColumnName="SUBORDINAL" />
+          <ScalarProperty Name="ORDINAL" ColumnName="ORDINAL" />
+          <ScalarProperty Name="OBJETO" ColumnName="OBJETO" />
+          <ScalarProperty Name="SUBCUENTA" ColumnName="SUBCUENTA" />
+          <ScalarProperty Name="CUENTA" ColumnName="CUENTA" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="GASTO_AUX" ColumnName="GASTO_AUX" />
+          <ScalarProperty Name="GASTO" ColumnName="GASTO" />
+          <ScalarProperty Name="RUBRO_AUX" ColumnName="RUBRO_AUX" />
+          <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+          <ScalarProperty Name="NIVEL_INTERNO" ColumnName="NIVEL_INTERNO" />
+          <ScalarProperty Name="DIS_INTERNA" ColumnName="DIS_INTERNA" />
+          <ScalarProperty Name="CON_SITUACION" ColumnName="CON_SITUACION" />
+          <ScalarProperty Name="COD_PAC" ColumnName="COD_PAC" />
+          <ScalarProperty Name="TIP_PAC" ColumnName="TIP_PAC" />
+          <ScalarProperty Name="REINTEGROS" ColumnName="REINTEGROS" />
+          <ScalarProperty Name="APROP_TRAMITE" ColumnName="APROP_TRAMITE" />
+          <ScalarProperty Name="RES_APROPIACION" ColumnName="RES_APROPIACION" />
+          <ScalarProperty Name="RES_CAJA" ColumnName="RES_CAJA" />
+          <ScalarProperty Name="CUENTAS_POR_PAGAR" ColumnName="CUENTAS_POR_PAGAR" />
+          <ScalarProperty Name="SAL_COMPROMISOS" ColumnName="SAL_COMPROMISOS" />
+          <ScalarProperty Name="SAL_CERTIFICADOS" ColumnName="SAL_CERTIFICADOS" />
+          <ScalarProperty Name="APROP_POR_COMPROMETER" ColumnName="APROP_POR_COMPROMETER" />
+          <ScalarProperty Name="PAGOS" ColumnName="PAGOS" />
+          <ScalarProperty Name="OBLIGACIONES" ColumnName="OBLIGACIONES" />
+          <ScalarProperty Name="COMPROMISOS" ColumnName="COMPROMISOS" />
+          <ScalarProperty Name="APROP_DISPONIBLE" ColumnName="APROP_DISPONIBLE" />
+          <ScalarProperty Name="CERTIFICACIONES" ColumnName="CERTIFICACIONES" />
+          <ScalarProperty Name="CONGELACIONES" ColumnName="CONGELACIONES" />
+          <ScalarProperty Name="APROP_DEFINITIVA" ColumnName="APROP_DEFINITIVA" />
+          <ScalarProperty Name="APROP_REDUCIDA" ColumnName="APROP_REDUCIDA" />
+          <ScalarProperty Name="APROP_ADICIONAL" ColumnName="APROP_ADICIONAL" />
+          <ScalarProperty Name="APROP_INICIAL" ColumnName="APROP_INICIAL" />
+          <ScalarProperty Name="NOM_GASTO" ColumnName="NOM_GASTO" />
+          <ScalarProperty Name="COD_RECURSO" ColumnName="COD_RECURSO" />
+          <ScalarProperty Name="COD_GASTO" ColumnName="COD_GASTO" />
+          <ScalarProperty Name="COD_UNIDAD" ColumnName="COD_UNIDAD" />
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

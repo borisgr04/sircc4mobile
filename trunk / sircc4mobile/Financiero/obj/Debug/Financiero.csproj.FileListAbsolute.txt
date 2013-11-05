@@ -1,0 +1,5 @@
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Financiero\bin\Debug\Financiero.dll.config
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Financiero\bin\Debug\Financiero.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Financiero\bin\Debug\Financiero.pdb
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Financiero\obj\Debug\Financiero.dll
+E:\ByA\snvSircc4\svnSircc4_27082013_4\Financiero\obj\Debug\Financiero.pdb

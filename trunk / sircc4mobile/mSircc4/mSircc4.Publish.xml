@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\ByA\SAM2013\Compilados\Sirccm4_31102013_2" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Financiero.dll" publishTime="10/30/2013 10:35:42" />
+    <file relUrl="Contratos/wsContratos.asmx" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="bin/GDocWord.xml" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Solicitudes/pagSEstados.htm" publishTime="10/30/2013 11:20:26" />
+    <file relUrl="Procesos/pagPEncargados.htm" publishTime="08/27/2013 14:53:38" />
+    <file relUrl="Global.asax" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Solicitudes/default.htm" publishTime="09/02/2013 00:45:13" />
+    <file relUrl="Styles/Site.css" publishTime="08/27/2013 14:53:29" />
+    <file relUrl="bin/Entidades.dll" publishTime="10/30/2013 10:35:42" />
+    <file relUrl="bin/ByA.dll" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="bin/ByA.pdb" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Scripts/Web.config" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="default.htm" publishTime="08/31/2013 10:48:54" />
+    <file relUrl="Contratos/PruebaREST.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="bin/Entidades.pdb" publishTime="10/30/2013 10:35:42" />
+    <file relUrl="Procesos/pagPEstados.htm" publishTime="08/27/2013 14:53:38" />
+    <file relUrl="bin/mSircc4.dll" publishTime="10/31/2013 13:00:04" />
+    <file relUrl="bin/DAL.dll" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Contratos/pagPSubtipos.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="Scripts/jquery_ext.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Contratos/pagPCronogramas.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="Procesos/pagPDep.htm" publishTime="08/27/2013 14:53:38" />
+    <file relUrl="login.htm" publishTime="10/31/2013 12:36:57" />
+    <file relUrl="Procesos/wsProcesos.asmx" publishTime="08/27/2013 14:53:38" />
+    <file relUrl="Solicitudes/wsSolicitudes.asmx" publishTime="09/01/2013 22:49:35" />
+    <file relUrl="Procesos/pagPMod.htm" publishTime="10/31/2013 12:00:33" />
+    <file relUrl="Scripts/jquery.cookie.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="bin/AutoMapper.xml" publishTime="08/27/2013 14:56:19" />
+    <file relUrl="Procesos/pagPCronogramas.htm" publishTime="10/31/2013 12:51:40" />
+    <file relUrl="wsSircc.asmx" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Contratos/pagPDep.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="bin/AutoMapper.dll" publishTime="08/27/2013 14:56:19" />
+    <file relUrl="Contratos/default.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="bin/DAL.pdb" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Solicitudes/pagPDep.htm" publishTime="10/30/2013 11:24:01" />
+    <file relUrl="bin/BLL.dll" publishTime="10/31/2013 13:00:03" />
+    <file relUrl="Scripts/byaSite.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Contratos/pagPEncargados.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="logout.aspx" publishTime="10/31/2013 12:30:09" />
+    <file relUrl="bin/GDocWord.dll" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Scripts/bya_Pagem.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="bin/BLL.pdb" publishTime="10/31/2013 13:00:03" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="bin/GDocWord.pdb" publishTime="10/30/2013 10:35:43" />
+    <file relUrl="Web.config" publishTime="10/31/2013 12:38:02" />
+    <file relUrl="Solicitudes/pagPMod.htm" publishTime="10/30/2013 12:37:27" />
+    <file relUrl="Contratos/pagPEstados.htm" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="bin/Financiero.pdb" publishTime="10/30/2013 10:35:42" />
+    <file relUrl="Solicitudes/default.js" publishTime="09/02/2013 00:49:45" />
+    <file relUrl="bin/mSircc4.pdb" publishTime="10/31/2013 13:00:04" />
+    <file relUrl="Solicitudes/pagPEncargados.htm" publishTime="10/30/2013 11:21:25" />
+    <file relUrl="Procesos/PProcesos.htm" publishTime="09/02/2013 00:34:45" />
+    <file relUrl="Scripts/purl.js" publishTime="08/27/2013 14:53:37" />
+    <file relUrl="Contratos/default.js" publishTime="08/27/2013 14:53:40" />
+    <file relUrl="Contratos/pagPMod.htm" publishTime="10/30/2013 12:38:41" />
+  </publishProfile>
+</publishData>
