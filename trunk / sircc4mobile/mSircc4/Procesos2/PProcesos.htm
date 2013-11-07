@@ -9,8 +9,9 @@
     <script type="text/javascript" src="../Scripts/byaSite.js"></script>
     <script src="../Scripts/jquery.cookie.js" type="text/javascript"></script>
     <script type="text/javascript">
-        var Servicio = "wsProcesos.asmx";
+        var Servicio = "wsProcesos2.asmx";
         var pagina = 1;
+        var cantTot = 0;
         function CargarFuncionarios() {
             //data: "{cod_con:'" + Cod_Con + "'}",
             $.ajax({
@@ -112,6 +113,21 @@
                 parent.appendChild(listItem);
                 $(parent).listview('refresh');
             }
+            function crearTotal(lst) {
+                var parent = document.getElementById(lst);
+                var listItem = document.createElement('li');
+                listItem.setAttribute('id', 'listitem');
+                //listItem.setAttribute('data-role', 'list-divider');
+
+                var str = " <a href='#pagProcesos'> CANTIDAD TOTAL </a>";
+                str += '<span class="ui-li-count">' + cantTot + '</span>';
+
+
+                listItem.innerHTML = str;
+                parent.appendChild(listItem);
+                $(parent).listview('refresh');
+            }
+
         }
 
         function CargarProcesos() {

@@ -83,6 +83,7 @@
     <Compile Include="MasterBL.cs" />
     <Compile Include="Menu\gesMenuAdapter.cs" />
     <Compile Include="EstPrev\mEP_FORMA_PAGO.cs" />
+    <Compile Include="mobile\mobProcesos.cs" />
     <Compile Include="mobile\mobContratos.cs" />
     <Compile Include="mobile\mobConsultas.cs" />
     <Compile Include="mobile\mobGeneral.cs" />

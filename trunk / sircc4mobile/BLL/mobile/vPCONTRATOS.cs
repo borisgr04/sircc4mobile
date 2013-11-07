@@ -15,5 +15,7 @@ namespace BLL.mobile
         public string ENCARGADO { get; set; }
         public string ESTADO { get; set; }
         public string CLASE { get; set; }
+        public int CANT_PROC { get; set; }
+      
     }
 }

@@ -32,6 +32,15 @@ namespace BLL.mobile
                 return (NOM1_TER == null ? "" : NOM1_TER.Trim()) + " " + (NOM2_TER == null ? "" : NOM2_TER.Trim()) + " " + APE1_TER.Trim() + " " + (APE2_TER == null ? "" : APE2_TER.Trim()).Trim();
             }
         }
+        public string NOMBREC{set;get;}
+        public int CANT_PROC { get; set; }
+    }
+
+    public class vTerceros2
+    {
+
+        public string IDE_TER { get; set; }
+        public string NOMBREC { set; get; }
         public int CANT_PROC { get; set; }
     }
 }
