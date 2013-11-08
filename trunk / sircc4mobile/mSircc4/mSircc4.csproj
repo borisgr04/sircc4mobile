@@ -61,6 +61,14 @@
     <Content Include="Contratos\pagPMod.htm" />
     <Content Include="Contratos\default.htm" />
     <Content Include="Contratos\wsContratos.asmx" />
+    <Content Include="Procesos2\pagPEstEncargados.htm" />
+    <Content Include="Procesos2\pagPCronogramas.htm" />
+    <Content Include="Procesos2\pagPDep.htm" />
+    <Content Include="Procesos2\pagPEncargados.htm" />
+    <Content Include="Procesos2\pagPEstados.htm" />
+    <Content Include="Procesos2\pagPMod.htm" />
+    <Content Include="Procesos2\PProcesos.htm" />
+    <Content Include="Procesos2\wsProcesos2.asmx" />
     <Content Include="default.htm" />
     <Content Include="login.htm" />
     <Content Include="logout.aspx" />
@@ -103,6 +111,10 @@
   <ItemGroup>
     <Compile Include="Contratos\wsContratos.asmx.cs">
       <DependentUpon>wsContratos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Procesos2\wsProcesos2.asmx.cs">
+      <DependentUpon>wsProcesos2.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
